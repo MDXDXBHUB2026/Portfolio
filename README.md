@@ -156,11 +156,21 @@ update them if a prototype gains screens.
 ## Editing the content later
 
 Everything lives in `index.html`, in plain readable sections marked with comment banners
-(`INTRO HERO`, `ABOUT`, `EXPERIENCE`, `PROJECTS`, `SKILLS`, `EDUCATION`, `CERTIFICATIONS`). To add a skill badge,
+(`INTRO HERO`, `ABOUT`, `EXPERIENCE`, `PROJECTS`, `SKILLS`, `EDUCATION`, `CERTIFICATIONS`,
+`CONTACT`). To add a skill badge,
 copy an existing `<li>` in that category and change the text. To add a role, copy a whole
 `<li class="reveal relative">` block in the experience timeline.
 
 Commit the change and GitHub Pages redeploys within a minute or so.
+
+## A note on deploying
+
+Avoid pushing twice within about a minute. GitHub Pages cancels the in-flight run and the
+next deploy can fail to acquire the `github-pages` environment — the build succeeds but
+nothing ships, and the site silently serves the previous commit. If the live site looks
+stale, check the run list at
+<https://github.com/MDXDXBHUB2026/Portfolio/actions> before assuming a caching problem.
+An empty commit (`git commit --allow-empty -m "Retrigger"`) re-runs the deployment.
 
 ## Local preview
 
@@ -182,5 +192,7 @@ opening via `file://` breaks the relative image paths.
 - Dark/light toggle, remembered in `localStorage`, defaulting to your system setting
 - Accessibility: skip link, ARIA labels, `aria-current` on the active nav item, visible
   focus rings, `Esc` to close the mobile menu, and full `prefers-reduced-motion` support
+- Contact section closing the page: email, phone, WhatsApp and LinkedIn, plus a
+  prefilled-subject mailto and a CV download
 - `Person` JSON-LD structured data for search engines
 - Print stylesheet — "Save as PDF" from the browser produces a clean document
