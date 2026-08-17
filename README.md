@@ -7,9 +7,11 @@ Commit the files and the site is live.
 ```
 index.html                 ← the entire site
 assets/
-  profile.jpg              ← YOUR HEADSHOT (you need to add this)
+  profile.jpg              ← headshot, cropped 3:4 from profile-source.jpg
+  profile-source.jpg       ← untouched original, kept for re-cropping
   og-image.png             ← LinkedIn preview card (generated)
   Manoj-Rajan-CV.pdf       ← optional, powers the "Download CV" button
+  projects/*.svg           ← prototype snapshots, copied from the AI portfolio
 tools/
   make-og-image.py         ← optional, regenerates og-image.png
 .nojekyll                  ← tells GitHub Pages to serve files as-is
@@ -121,10 +123,24 @@ renders the card at roughly half size in the feed.
 
 ---
 
+## Updating the project snapshots
+
+The six cards in `#projects` use SVGs copied into `assets/projects/` from the standalone
+AI portfolio, so this site stays self-contained and does not hotlink another page. If you
+change a prototype's screenshots over there, refresh the copy here:
+
+```bash
+curl -sL -o assets/projects/maritime.svg https://mdxdxbhub2026.github.io/digital-ai-portfolio/images/maritime.svg
+```
+
+Cards sit in a 16:9 frame with `object-contain`, so a tall mobile mockup (GreenRoute) is
+letterboxed rather than cropped. Snapshot counts in the card links are written by hand —
+update them if a prototype gains screens.
+
 ## Editing the content later
 
 Everything lives in `index.html`, in plain readable sections marked with comment banners
-(`ABOUT`, `EXPERIENCE`, `SKILLS`, `EDUCATION`, `CERTIFICATIONS`). To add a skill badge,
+(`INTRO HERO`, `ABOUT`, `EXPERIENCE`, `PROJECTS`, `SKILLS`, `EDUCATION`, `CERTIFICATIONS`). To add a skill badge,
 copy an existing `<li>` in that category and change the text. To add a role, copy a whole
 `<li class="reveal relative">` block in the experience timeline.
 
@@ -143,6 +159,8 @@ opening via `file://` breaks the relative image paths.
 
 - Full-bleed intro hero with a large portrait, desaturated and masked so it dissolves
   into the charcoal band (treatment modelled on goranradmanovic.github.io)
+- Projects section carrying six AI prototype cards with snapshots, each linking through
+  to the full write-up at mdxdxbhub2026.github.io/digital-ai-portfolio
 - Sticky full-height sidebar on desktop, collapsing to a hamburger bar under 1024px
 - Smooth scrolling with active-link highlighting driven by scroll position
 - Dark/light toggle, remembered in `localStorage`, defaulting to your system setting
