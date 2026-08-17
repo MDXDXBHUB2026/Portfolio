@@ -118,6 +118,39 @@
 
   ::selection { background: #d97706; color: #fff; }
 
+  /* ── Intro hero ────────────────────────────────────────────────────────
+     Photo treatment follows goranradmanovic.github.io: a large portrait,
+     desaturated so it reads as part of the charcoal band, masked so the
+     bottom edge dissolves into the background instead of ending on a line.
+     Grayscale is used rather than mix-blend-mode: luminosity because it is
+     transitionable, so the portrait warms to full colour on hover. */
+  .intro-photo {
+    width: 100%;
+    height: clamp(19rem, 44vw, 32rem);
+    object-fit: cover;
+    object-position: center 15%;
+    filter: grayscale(0.85) contrast(1.05) brightness(0.95);
+    transition: filter .5s ease;
+    -webkit-mask-image: linear-gradient(to top, transparent 0, #000 5rem);
+    mask-image: linear-gradient(to top, transparent 0, #000 5rem);
+  }
+  .intro-photo:hover { filter: grayscale(0) contrast(1) brightness(1); }
+
+  /* Melts the inner edge of the portrait into the band */
+  .intro-photo-wrap::before {
+    content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(to right, #0f172a 0%, rgba(15,23,42,0) 30%);
+  }
+  @media (max-width: 1023px) {
+    .intro-photo-wrap::before {
+      background: linear-gradient(to top, #0f172a 0%, rgba(15,23,42,0) 25%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .intro-photo { transition: none; }
+  }
+
   /* Restrained scrollbar */
   @media (min-width: 1024px) {
     #sidebar { scrollbar-width: thin; scrollbar-color: #334155 transparent; }
@@ -149,7 +182,7 @@
 
 <!-- ══════════════════════ MOBILE BAR ══════════════════════ -->
 <div id="mobile-bar" class="lg:hidden fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 bg-slate-900/95 backdrop-blur border-b border-slate-700/50">
-  <a href="#about" class="flex items-center gap-3 min-w-0">
+  <a href="#intro" class="flex items-center gap-3 min-w-0">
     <img id="avatar-sm" src="assets/profile.jpg" alt="" width="36" height="36" aria-hidden="true"
          class="h-9 w-9 shrink-0 rounded-xl object-cover object-top ring-1 ring-white/10">
     <span id="avatar-sm-fallback" hidden class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-800 text-amber-400 text-xs font-bold tracking-wide ring-1 ring-white/10">MR</span>
@@ -191,7 +224,8 @@
         </div>
       </div>
 
-      <h1 class="mt-6 text-xl font-bold tracking-tight text-white">Manoj Rajan</h1>
+      <!-- Deliberately a paragraph: the intro hero owns the page's only top-level heading -->
+      <p class="mt-6 text-xl font-bold tracking-tight text-white">Manoj Rajan</p>
       <p class="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-amber-400">PMP<sup>®</sup> &nbsp;·&nbsp; CBAP<sup>®</sup> &nbsp;·&nbsp; ITIL<sup>®</sup></p>
       <p class="mt-3.5 text-sm font-medium leading-snug text-slate-300">
         Digital Transformation Manager<br>Enterprise Solutions Lead
@@ -257,6 +291,49 @@
 
 <!-- ══════════════════════ MAIN ══════════════════════ -->
 <main id="main" class="lg:ml-[19.5rem] pt-16 lg:pt-0">
+
+  <!-- ─────────── INTRO HERO ─────────── -->
+  <section id="intro" class="relative overflow-hidden bg-slate-900" aria-labelledby="intro-h">
+    <div class="mx-auto grid w-full max-w-5xl items-center gap-2 px-6 sm:px-10 lg:px-14 lg:grid-cols-[1.05fr_0.95fr]">
+
+      <div class="order-2 lg:order-1 pb-14 lg:py-20">
+        <p class="text-[11px] font-bold uppercase tracking-eyebrow text-amber-400">Digital transformation · Enterprise systems</p>
+        <h1 id="intro-h" class="mt-4 text-4xl sm:text-5xl font-extrabold leading-[1.08] tracking-[-0.025em] text-white">Manoj Rajan</h1>
+        <p class="mt-4 text-lg sm:text-xl font-medium leading-snug text-slate-300">
+          Digital Transformation Manager<br>
+          <span class="text-amber-400">Enterprise Solutions Lead</span>
+        </p>
+        <p class="mt-5 max-w-md text-[15px] leading-relaxed text-slate-400">
+          Twenty years turning under-used enterprise platforms into systems the business actually
+          runs on — across a fleet of 70+ vessels, through an acquisition, and USD 2.5M+ in
+          delivered savings.
+        </p>
+        <p class="mt-5 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+          PMP<sup>®</sup> &nbsp;·&nbsp; CBAP<sup>®</sup> &nbsp;·&nbsp; ITIL<sup>®</sup> &nbsp;·&nbsp; Dubai, UAE
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#experience" class="inline-flex items-center gap-2.5 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200">
+            View experience <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+          </a>
+          <a href="#about" class="inline-flex items-center gap-2.5 rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-200 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200">
+            About me
+          </a>
+        </div>
+      </div>
+
+      <!-- Portrait. Falls back to initials if assets/profile.jpg is absent. -->
+      <div class="intro-photo-wrap order-1 lg:order-2 relative self-end">
+        <img id="hero-photo" src="assets/profile.jpg" alt="Portrait of Manoj Rajan"
+             decoding="async" fetchpriority="high" class="intro-photo">
+        <div id="hero-photo-fallback" hidden class="intro-photo grid place-items-center bg-slate-800/60">
+          <span class="text-7xl font-bold tracking-[0.1em] text-slate-600" aria-hidden="true">MR</span>
+          <span class="sr-only">Profile photo placeholder showing the initials M R</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="mx-auto w-full max-w-3xl px-6 sm:px-10 lg:px-14 py-14 lg:py-20">
 
     <!-- ─────────── ABOUT ─────────── -->
@@ -644,7 +721,7 @@
         <div class="flex items-center gap-5 no-print">
           <a href="https://www.linkedin.com/in/manojrajanuae/" target="_blank" rel="noopener noreferrer" class="text-[13px] font-medium text-slate-500 hover:text-amber-700 dark:hover:text-amber-400 transition-colors duration-200">LinkedIn</a>
           <a href="mailto:echoflare06@gmail.com" class="text-[13px] font-medium text-slate-500 hover:text-amber-700 dark:hover:text-amber-400 transition-colors duration-200">Email</a>
-          <a href="#about" class="text-[13px] font-medium text-slate-500 hover:text-amber-700 dark:hover:text-amber-400 transition-colors duration-200">Back to top ↑</a>
+          <a href="#intro" class="text-[13px] font-medium text-slate-500 hover:text-amber-700 dark:hover:text-amber-400 transition-colors duration-200">Back to top ↑</a>
         </div>
       </div>
     </footer>
@@ -682,7 +759,7 @@
   var sections  = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
 
   /* ---------- Avatar fallback (shows initials if the photo is missing) ---------- */
-  [['avatar', 'avatar-fallback'], ['avatar-sm', 'avatar-sm-fallback']].forEach(function (pair) {
+  [['avatar', 'avatar-fallback'], ['avatar-sm', 'avatar-sm-fallback'], ['hero-photo', 'hero-photo-fallback']].forEach(function (pair) {
     var img = document.getElementById(pair[0]);
     var fb  = document.getElementById(pair[1]);
     if (!img || !fb) return;
@@ -725,7 +802,7 @@
   });
 
   /* ---------- Smooth scrolling ---------- */
-  navLinks.concat(Array.prototype.slice.call(document.querySelectorAll('a[href="#about"], a[href="#main"]')))
+  navLinks.concat(Array.prototype.slice.call(document.querySelectorAll('a[href="#about"], a[href="#main"], a[href="#intro"], a[href="#experience"]')))
     .forEach(function (link) {
       link.addEventListener('click', function (e) {
         var target = document.querySelector(link.getAttribute('href'));

@@ -19,17 +19,26 @@ tools/
 
 ## Step 0 — Three edits before you publish
 
-### 1. Add your headshot  ← required
+### 1. Add your photo  ← required, still outstanding
 
-Crop the photo to a **square around head and shoulders** (not the full seated shot —
-in a 112px circle a full-body crop makes the face unreadable). Save it as:
+Save one file as:
 
 ```
 assets/profile.jpg
 ```
 
-Roughly 600×600px is plenty. Until this file exists the site shows a slate "MR" circle
-instead — it never shows a broken image.
+It is used in two places, so crop it to **head and shoulders in portrait orientation**
+with your face in the upper third — around 900×1200px:
+
+- **Intro hero** (large, right-hand side) — filled to a tall box, anchored 15% from the
+  top, desaturated and faded into the charcoal band, warming to full colour on hover.
+- **Sidebar avatar** (112px circle) — anchored to the top of the image.
+
+A full-length shot works poorly in both: the face ends up tiny in the circle. Until the
+file exists, both spots show an "MR" placeholder — never a broken image.
+
+To turn off the desaturation, delete the `filter:` line from `.intro-photo` in the
+`<style>` block.
 
 ### 2. Live URL — already set ✅
 
@@ -132,6 +141,8 @@ opening via `file://` breaks the relative image paths.
 
 ## What's built in
 
+- Full-bleed intro hero with a large portrait, desaturated and masked so it dissolves
+  into the charcoal band (treatment modelled on goranradmanovic.github.io)
 - Sticky full-height sidebar on desktop, collapsing to a hamburger bar under 1024px
 - Smooth scrolling with active-link highlighting driven by scroll position
 - Dark/light toggle, remembered in `localStorage`, defaulting to your system setting
