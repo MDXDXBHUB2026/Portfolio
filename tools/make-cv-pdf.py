@@ -139,11 +139,15 @@ EDUCATION = [
 ]
 
 CERTIFICATIONS = [
-    ("Project Management Professional (PMP<super rise=3 size=6>&#174;</super>)", "Project Management Institute (PMI)"),
+    ("Project Management Professional (PMP<super rise=3 size=6>&#174;</super>)",
+     "Project Management Institute (PMI)", "Issued Dec 2020 · valid to Dec 2027 · ID 2906566"),
     ("Certified Business Analysis Professional (CBAP<super rise=3 size=6>&#174;</super>)",
-     "International Institute of Business Analysis (IIBA)"),
-    ("ITIL<super rise=3 size=6>&#174;</super> Foundation", "EXIN"),
-    ("AI Development &amp; Agentic AI (CAIDP · CAAIP) — in progress", "LISRC"),
+     "International Institute of Business Analysis (IIBA)",
+     "Issued Jan 2021 · valid to Jan 2027 · ID 27452398"),
+    ("ITIL<super rise=3 size=6>&#174;</super> Foundation", "EXIN",
+     "Issued Mar 2009 · ID 5748085.20561483"),
+    ("AI Development &amp; Agentic AI (CAIDP · CAAIP)", "LISRC",
+     "In progress · expected Oct 2026"),
 ]
 
 PROTOTYPES = (
@@ -271,8 +275,10 @@ def build() -> None:
                          S["kv"], bulletText="•")]
 
     st += heading("Certifications", width)
-    for cert, body_name in CERTIFICATIONS:
-        st += [Paragraph(f"<b>{cert}</b> — {body_name}", S["kv"], bulletText="•")]
+    for cert, body_name, detail in CERTIFICATIONS:
+        st += [Paragraph(f"<b>{cert}</b> — {body_name}"
+                         f"<font color='#5B6675' size=7.6>&nbsp; {detail}</font>",
+                         S["kv"], bulletText="•")]
 
     st += heading("Core expertise", width)
     for label, items in EXPERTISE:
