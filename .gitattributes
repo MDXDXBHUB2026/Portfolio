@@ -1,0 +1,18 @@
+# Binary assets must never have line endings rewritten — CRLF conversion
+# corrupts PDFs and images. Git guessed the CV was text on first commit.
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.avif  binary
+*.ico   binary
+
+# Text assets: normalise to LF in the repo
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.md    text eol=lf
+*.svg   text eol=lf
+*.py    text eol=lf
