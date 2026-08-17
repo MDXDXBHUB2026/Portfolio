@@ -1124,8 +1124,8 @@
      visitor's mail client with everything they typed already filled in. The
      same fallback catches network or backend failures, so a message is never
      silently lost.                                                          */
-  var FORM_ENDPOINT = '';
-  var FORM_ACCESS_KEY = '';          // Web3Forms only; leave empty for Formspree
+  var FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+  var FORM_ACCESS_KEY = '0751bce7-da56-49c7-a92a-dd0b60db8f2d';   // public by design
   var CONTACT_EMAIL = 'echoflare06@gmail.com';
 
   var form = document.getElementById('contact-form');
@@ -1232,11 +1232,24 @@
       }
 
       var payload = {
-        name: data.name, email: data.email,
-        company: data.company || '(not given)', message: data.message,
-        _subject: 'Portfolio enquiry from ' + data.name
+        name: data.name,
+        email: data.email,
+        company: data.company || '(not given)',
+        message: data.message
       };
-      if (FORM_ACCESS_KEY) payload.access_key = FORM_ACCESS_KEY;
+
+      if (FORM_ACCESS_KEY) {
+        // Web3Forms. replyto matters: without it, hitting Reply in the inbox
+        // answers yourself rather than the person who wrote in.
+        payload.access_key = FORM_ACCESS_KEY;
+        payload.subject = 'Portfolio enquiry from ' + data.name;
+        payload.from_name = data.name;
+        payload.replyto = data.email;
+      } else {
+        // Formspree uses its own underscore-prefixed field names
+        payload._subject = 'Portfolio enquiry from ' + data.name;
+        payload._replyto = data.email;
+      }
 
       busy(true);
       say('Sending your message…', 'muted');

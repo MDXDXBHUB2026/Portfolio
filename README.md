@@ -125,46 +125,35 @@ renders the card at roughly half size in the feed.
 
 ---
 
-## Connecting the contact form  ← action needed
+## The contact form
 
-The form in `#contact` is built and validated, but **not yet connected**. GitHub Pages
-serves static files and cannot send email, so submissions need a third-party form backend.
-Until you connect one, the form falls back to opening the visitor's mail client with
-everything they typed already filled in — so it still works, it just isn't seamless.
+The form in `#contact` is connected to **Web3Forms**, which delivers submissions to
+`echoflare06@gmail.com`. Free tier: 250 messages/month. GitHub Pages serves static files
+and cannot send email itself, which is why a backend is involved at all.
 
-You have to create the account yourself; then paste one value into `index.html`.
+Configuration lives in `index.html`, near the bottom of the script:
 
-### Option A — Web3Forms (no account, fastest)
+```js
+var FORM_ENDPOINT   = 'https://api.web3forms.com/submit';
+var FORM_ACCESS_KEY = '0751bce7-...';   // public by design, safe in the repo
+```
 
-1. Go to <https://web3forms.com>, enter `echoflare06@gmail.com`, and click to get an
-   access key. Check your inbox and confirm.
-2. In `index.html`, find `var FORM_ENDPOINT` near the bottom and set **both**:
+The access key is meant to be readable in client-side code — that is how a form works on a
+static host at all. It is not a password and grants nothing except the ability to send you
+a message through that form.
 
-   ```js
-   var FORM_ENDPOINT = 'https://api.web3forms.com/submit';
-   var FORM_ACCESS_KEY = 'paste-your-access-key-here';
-   ```
+Submissions set `replyto` to the sender's address, so replying from your inbox reaches
+them rather than you.
 
-Free tier: 250 submissions/month.
+To switch to Formspree instead, set `FORM_ENDPOINT` to your `https://formspree.io/f/xxxx`
+endpoint and blank out `FORM_ACCESS_KEY`; the payload switches to Formspree's field names
+automatically.
 
-### Option B — Formspree
+If a send ever fails — backend down, visitor offline — the form falls back to opening
+their mail client with everything they typed already filled in, so a message is never
+silently lost.
 
-1. Sign up at <https://formspree.io>, create a new form, and copy its endpoint — it looks
-   like `https://formspree.io/f/abcdwxyz`.
-2. In `index.html`, set just the endpoint and leave the access key empty:
-
-   ```js
-   var FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';
-   var FORM_ACCESS_KEY = '';
-   ```
-
-Free tier: 50 submissions/month. The first submission needs email confirmation.
-
-### Then
-
-Commit, push, and send yourself a test message from the live site to confirm it arrives.
-
-Both services see the contents of every message and the sender's email address — that is
+Web3Forms sees the contents of every message and the sender's email address — that is
 inherent to any form on a static host. If you would rather not involve a third party at
 all, delete the `<form id="contact-form">` block; the email, phone, WhatsApp and LinkedIn
 cards beside it already give people four ways to reach you.
