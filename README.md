@@ -28,12 +28,12 @@ in a 112px circle a full-body crop makes the face unreadable). Save it as:
 assets/profile.jpg
 ```
 
-Roughly 600×600px is plenty. Until this file exists the site shows a blue "MR" circle
+Roughly 600×600px is plenty. Until this file exists the site shows a slate "MR" circle
 instead — it never shows a broken image.
 
 ### 2. Live URL — already set ✅
 
-The site is wired to **<https://mdxdxbhub2026.github.io/Portffolio/>** in the four tags near
+The site is wired to **<https://mdxdxbhub2026.github.io/Portfolio/>** in the four tags near
 the top of `index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`). These must stay
 **absolute URLs** — LinkedIn will not follow a relative path when it builds the preview card.
 
@@ -52,7 +52,7 @@ If you ever rename the repo, update all four.
 
 ## Steps 1 & 2 — Repository and upload ✅ done
 
-The code lives at <https://github.com/MDXDXBHUB2026/Portffolio> on the `main` branch.
+The code lives at <https://github.com/MDXDXBHUB2026/Portfolio> on the `main` branch.
 
 To push later changes:
 
@@ -84,10 +84,10 @@ The preview card is already wired up. What makes it appear:
 | `og:type`, `og:site_name` | Context for the unfurler |
 
 1. Confirm the image loads on its own: open
-   <https://mdxdxbhub2026.github.io/Portffolio/assets/og-image.png> directly in a browser.
+   <https://mdxdxbhub2026.github.io/Portfolio/assets/og-image.png> directly in a browser.
    If that 404s, LinkedIn will show a bare text link.
 2. Go to the **LinkedIn Post Inspector**: <https://www.linkedin.com/post-inspector/>
-3. Paste `https://mdxdxbhub2026.github.io/Portffolio/` and click **Inspect**. You'll see
+3. Paste `https://mdxdxbhub2026.github.io/Portfolio/` and click **Inspect**. You'll see
    exactly what the card will look like.
 4. **This step matters:** LinkedIn caches preview data for about 7 days. If you share the
    link first and fix the tags afterwards, the old (or empty) card sticks around. Running
