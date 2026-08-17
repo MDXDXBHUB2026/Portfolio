@@ -10,10 +10,11 @@ assets/
   profile.jpg              ← headshot, cropped 3:4 from profile-source.jpg
   profile-source.jpg       ← untouched original, kept for re-cropping
   og-image.png             ← LinkedIn preview card (generated)
-  Manoj-Rajan-CV.pdf       ← optional, powers the "Download CV" button
+  Manoj-Rajan-CV.pdf       ← generated CV, powers the "Download CV" button
   projects/*.svg           ← prototype snapshots, copied from the AI portfolio
 tools/
-  make-og-image.py         ← optional, regenerates og-image.png
+  make-og-image.py         ← regenerates og-image.png
+  make-cv-pdf.py           ← regenerates the downloadable CV
 .nojekyll                  ← tells GitHub Pages to serve files as-is
 ```
 
@@ -54,8 +55,9 @@ If you ever rename the repo, update all four.
 
 - **GitHub icon** — the sidebar GitHub link is commented out. Uncomment it and add your
   handle, or leave it hidden.
-- **Download CV** — drop your PDF at `assets/Manoj-Rajan-CV.pdf`, or delete that block
-  from the sidebar.
+- **Download CV** — the button serves `assets/Manoj-Rajan-CV.pdf`, generated from
+  `tools/make-cv-pdf.py`. Edit the CONTENT block in that script and re-run to update it,
+  or just drop your own PDF in at the same path.
 - **Certification years** — the credential cards show the issuing body but no dates.
   Add the year you earned each one in the `#certifications` section.
 
@@ -122,6 +124,20 @@ If you'd rather not run the script, any 1200×630 PNG or JPG dropped in as
 renders the card at roughly half size in the feed.
 
 ---
+
+## Regenerating the CV
+
+The downloadable CV is built from a script so it stays in step with the site:
+
+```bash
+python tools/make-cv-pdf.py
+```
+
+Requires reportlab (`pip install reportlab`). All wording lives in the constants at the top
+of the script — summary, highlights, roles, education, certifications, expertise. Layout,
+spacing and page breaks are handled for you. Two pages, A4.
+
+Certification years are not in the CV yet; add them there and in `#certifications` together.
 
 ## Updating the project snapshots
 
