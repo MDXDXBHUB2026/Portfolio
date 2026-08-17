@@ -125,6 +125,52 @@ renders the card at roughly half size in the feed.
 
 ---
 
+## Connecting the contact form  ← action needed
+
+The form in `#contact` is built and validated, but **not yet connected**. GitHub Pages
+serves static files and cannot send email, so submissions need a third-party form backend.
+Until you connect one, the form falls back to opening the visitor's mail client with
+everything they typed already filled in — so it still works, it just isn't seamless.
+
+You have to create the account yourself; then paste one value into `index.html`.
+
+### Option A — Web3Forms (no account, fastest)
+
+1. Go to <https://web3forms.com>, enter `echoflare06@gmail.com`, and click to get an
+   access key. Check your inbox and confirm.
+2. In `index.html`, find `var FORM_ENDPOINT` near the bottom and set **both**:
+
+   ```js
+   var FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+   var FORM_ACCESS_KEY = 'paste-your-access-key-here';
+   ```
+
+Free tier: 250 submissions/month.
+
+### Option B — Formspree
+
+1. Sign up at <https://formspree.io>, create a new form, and copy its endpoint — it looks
+   like `https://formspree.io/f/abcdwxyz`.
+2. In `index.html`, set just the endpoint and leave the access key empty:
+
+   ```js
+   var FORM_ENDPOINT = 'https://formspree.io/f/abcdwxyz';
+   var FORM_ACCESS_KEY = '';
+   ```
+
+Free tier: 50 submissions/month. The first submission needs email confirmation.
+
+### Then
+
+Commit, push, and send yourself a test message from the live site to confirm it arrives.
+
+Both services see the contents of every message and the sender's email address — that is
+inherent to any form on a static host. If you would rather not involve a third party at
+all, delete the `<form id="contact-form">` block; the email, phone, WhatsApp and LinkedIn
+cards beside it already give people four ways to reach you.
+
+The form includes a hidden honeypot field that silently discards bot submissions.
+
 ## Regenerating the CV
 
 The downloadable CV is built from a script so it stays in step with the site:
@@ -192,7 +238,7 @@ opening via `file://` breaks the relative image paths.
 - Dark/light toggle, remembered in `localStorage`, defaulting to your system setting
 - Accessibility: skip link, ARIA labels, `aria-current` on the active nav item, visible
   focus rings, `Esc` to close the mobile menu, and full `prefers-reduced-motion` support
-- Contact section closing the page: email, phone, WhatsApp and LinkedIn, plus a
-  prefilled-subject mailto and a CV download
+- Contact section closing the page: a validated message form, plus email, phone,
+  WhatsApp and LinkedIn cards and a CV download
 - `Person` JSON-LD structured data for search engines
 - Print stylesheet — "Save as PDF" from the browser produces a clean document

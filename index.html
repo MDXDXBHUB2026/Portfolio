@@ -841,7 +841,64 @@
         </a>
       </div>
 
-      <ul class="reveal mt-8 grid gap-3 sm:grid-cols-2">
+      <div class="mt-10 grid gap-5 lg:grid-cols-[1.15fr_1fr] lg:items-start">
+
+        <!-- Contact form.
+             Needs a form backend: GitHub Pages serves static files and cannot send
+             email. Paste your endpoint into FORM_ENDPOINT in the script at the
+             bottom of this file (see README). Until then, and if a send ever fails,
+             the form falls back to opening the visitor's mail client with what they
+             typed already filled in — so it is never a dead end. -->
+        <form id="contact-form" class="reveal rounded-xl border border-slate-200 dark:border-white/[0.07] bg-white dark:bg-night-surface p-6 shadow-card" novalidate>
+          <h3 class="text-sm font-bold uppercase tracking-[0.1em] text-slate-900 dark:text-white">Send a message</h3>
+
+          <!-- Spam trap: hidden from people, tempting to bots -->
+          <div class="hidden" aria-hidden="true">
+            <label for="cf-website">Leave this field empty</label>
+            <input type="text" id="cf-website" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="mt-5 grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="cf-name" class="block text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">Name <span class="text-amber-600" aria-hidden="true">*</span></label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" aria-describedby="cf-name-err"
+                     class="mt-1.5 w-full rounded-lg border border-slate-300 dark:border-white/10 bg-white dark:bg-white/[0.04] px-3 py-2.5 text-[14px] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/25 transition-colors"
+                     placeholder="Your name">
+              <p id="cf-name-err" class="mt-1 hidden text-[12px] font-medium text-red-600 dark:text-red-400"></p>
+            </div>
+            <div>
+              <label for="cf-email" class="block text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">Email <span class="text-amber-600" aria-hidden="true">*</span></label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" aria-describedby="cf-email-err"
+                     class="mt-1.5 w-full rounded-lg border border-slate-300 dark:border-white/10 bg-white dark:bg-white/[0.04] px-3 py-2.5 text-[14px] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/25 transition-colors"
+                     placeholder="you@company.com">
+              <p id="cf-email-err" class="mt-1 hidden text-[12px] font-medium text-red-600 dark:text-red-400"></p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <label for="cf-company" class="block text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">Company <span class="normal-case tracking-normal text-slate-400">(optional)</span></label>
+            <input type="text" id="cf-company" name="company" autocomplete="organization"
+                   class="mt-1.5 w-full rounded-lg border border-slate-300 dark:border-white/10 bg-white dark:bg-white/[0.04] px-3 py-2.5 text-[14px] text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/25 transition-colors"
+                   placeholder="Organisation or agency">
+          </div>
+
+          <div class="mt-4">
+            <label for="cf-message" class="block text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500">Message <span class="text-amber-600" aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="5" required aria-describedby="cf-message-err"
+                      class="mt-1.5 w-full resize-y rounded-lg border border-slate-300 dark:border-white/10 bg-white dark:bg-white/[0.04] px-3 py-2.5 text-[14px] leading-relaxed text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500/25 transition-colors"
+                      placeholder="The role, the team, and what you're looking for."></textarea>
+            <p id="cf-message-err" class="mt-1 hidden text-[12px] font-medium text-red-600 dark:text-red-400"></p>
+          </div>
+
+          <button type="submit" id="cf-submit"
+                  class="mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-200 sm:w-auto">
+            <i id="cf-icon" class="fa-solid fa-paper-plane" aria-hidden="true"></i> <span id="cf-label">Send message</span>
+          </button>
+
+          <p id="cf-status" role="status" aria-live="polite" class="mt-4 hidden text-[13px] leading-relaxed"></p>
+        </form>
+
+        <ul class="reveal grid gap-3">
         <li>
           <a href="mailto:echoflare06@gmail.com" class="group flex items-center gap-3.5 rounded-xl border border-slate-200 dark:border-white/[0.07] bg-white dark:bg-night-surface p-4 shadow-card hover:shadow-lift hover:border-amber-300 dark:hover:border-amber-500/40 transition-all duration-200">
             <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-slate-100 dark:bg-white/[0.06] text-slate-700 dark:text-slate-300 group-hover:bg-amber-50 group-hover:text-amber-700 dark:group-hover:bg-amber-500/10 dark:group-hover:text-amber-400 transition-colors duration-200"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
@@ -878,7 +935,8 @@
             </span>
           </a>
         </li>
-      </ul>
+        </ul>
+      </div>
 
       <p class="reveal mt-6 inline-flex items-center gap-2 text-[13px] text-slate-500 dark:text-slate-500">
         <i class="fa-solid fa-location-dot text-amber-600 dark:text-amber-500" aria-hidden="true"></i>
@@ -1054,6 +1112,151 @@
     localStorage.setItem('theme', dark ? 'dark' : 'light');
     syncThemeLabel();
   });
+
+  /* ---------- Contact form ----------------------------------------------
+     GitHub Pages is static and cannot send email, so submissions go to a
+     form backend over fetch. Paste your endpoint below — see the README.
+
+       Formspree:  'https://formspree.io/f/xxxxxxxx'
+       Web3Forms:  'https://api.web3forms.com/submit'  (also set FORM_ACCESS_KEY)
+
+     Leave FORM_ENDPOINT empty and the form still works: it falls back to the
+     visitor's mail client with everything they typed already filled in. The
+     same fallback catches network or backend failures, so a message is never
+     silently lost.                                                          */
+  var FORM_ENDPOINT = '';
+  var FORM_ACCESS_KEY = '';          // Web3Forms only; leave empty for Formspree
+  var CONTACT_EMAIL = 'echoflare06@gmail.com';
+
+  var form = document.getElementById('contact-form');
+
+  if (form) {
+    var statusEl = document.getElementById('cf-status');
+    var submitBtn = document.getElementById('cf-submit');
+    var labelEl = document.getElementById('cf-label');
+    var iconEl = document.getElementById('cf-icon');
+
+    var FIELDS = [
+      { id: 'cf-name', label: 'your name' },
+      { id: 'cf-email', label: 'your email address' },
+      { id: 'cf-message', label: 'a message' }
+    ];
+
+    function setError(input, message) {
+      var err = document.getElementById(input.id + '-err');
+      if (message) {
+        input.setAttribute('aria-invalid', 'true');
+        input.classList.add('border-red-500', 'dark:border-red-500');
+        if (err) { err.textContent = message; err.hidden = false; err.classList.remove('hidden'); }
+      } else {
+        input.removeAttribute('aria-invalid');
+        input.classList.remove('border-red-500', 'dark:border-red-500');
+        if (err) { err.textContent = ''; err.classList.add('hidden'); }
+      }
+    }
+
+    function validate() {
+      var firstBad = null;
+      FIELDS.forEach(function (f) {
+        var input = document.getElementById(f.id);
+        var value = input.value.trim();
+        var message = '';
+        if (!value) {
+          message = 'Please enter ' + f.label + '.';
+        } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+          message = 'That email address does not look right.';
+        }
+        setError(input, message);
+        if (message && !firstBad) firstBad = input;
+      });
+      if (firstBad) firstBad.focus();
+      return !firstBad;
+    }
+
+    // Clear a field's error as soon as the visitor starts fixing it
+    FIELDS.forEach(function (f) {
+      var input = document.getElementById(f.id);
+      input.addEventListener('input', function () {
+        if (input.hasAttribute('aria-invalid')) setError(input, '');
+      });
+    });
+
+    function say(message, tone) {
+      statusEl.innerHTML = message;
+      statusEl.classList.remove('hidden', 'text-emerald-700', 'dark:text-emerald-400',
+                                'text-red-600', 'dark:text-red-400', 'text-slate-500');
+      if (tone === 'ok') statusEl.classList.add('text-emerald-700', 'dark:text-emerald-400');
+      else if (tone === 'bad') statusEl.classList.add('text-red-600', 'dark:text-red-400');
+      else statusEl.classList.add('text-slate-500');
+    }
+
+    function busy(isBusy) {
+      submitBtn.disabled = isBusy;
+      labelEl.textContent = isBusy ? 'Sending…' : 'Send message';
+      iconEl.className = isBusy ? 'fa-solid fa-circle-notch fa-spin' : 'fa-solid fa-paper-plane';
+    }
+
+    function mailtoFallback(data) {
+      var subject = 'Portfolio enquiry from ' + data.name + (data.company ? ' (' + data.company + ')' : '');
+      var body = data.message + '\n\n—\n' + data.name + (data.company ? '\n' + data.company : '') + '\n' + data.email;
+      return 'mailto:' + CONTACT_EMAIL +
+             '?subject=' + encodeURIComponent(subject) +
+             '&body=' + encodeURIComponent(body);
+    }
+
+    function offerMailto(data, reason) {
+      say(reason + ' <a href="' + mailtoFallback(data) + '" class="font-semibold underline decoration-amber-500 underline-offset-2">' +
+          'Open it in your email app instead</a> — everything you typed is already in there.', 'bad');
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (document.getElementById('cf-website').value) return;   // bot fell in the trap
+
+      if (!validate()) {
+        say('Please correct the highlighted fields.', 'bad');
+        return;
+      }
+
+      var data = {
+        name: document.getElementById('cf-name').value.trim(),
+        email: document.getElementById('cf-email').value.trim(),
+        company: document.getElementById('cf-company').value.trim(),
+        message: document.getElementById('cf-message').value.trim()
+      };
+
+      if (!FORM_ENDPOINT) {
+        offerMailto(data, 'This form is not connected to a mail service yet.');
+        return;
+      }
+
+      var payload = {
+        name: data.name, email: data.email,
+        company: data.company || '(not given)', message: data.message,
+        _subject: 'Portfolio enquiry from ' + data.name
+      };
+      if (FORM_ACCESS_KEY) payload.access_key = FORM_ACCESS_KEY;
+
+      busy(true);
+      say('Sending your message…', 'muted');
+
+      fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          say('Thank you — your message has been sent. I typically reply within one working day.', 'ok');
+          form.reset();
+        })
+        .catch(function () {
+          offerMailto(data, 'Sorry — that did not send.');
+        })
+        .then(function () { busy(false); });
+    });
+  }
 
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
