@@ -24,11 +24,11 @@ FOOTER = "PMP®  ·  CBAP®  ·  ITIL®        Dubai, United Arab Emirates"
 
 # ── Look ─────────────────────────────────────────────────────────────────
 W, H = 1200, 630
-BG_TOP, BG_BOTTOM = (11, 16, 32), (21, 29, 84)
-ACCENT = (52, 101, 247)
-ACCENT_SOFT = (142, 181, 255)
+BG_TOP, BG_BOTTOM = (15, 23, 42), (30, 41, 59)     # slate-900 → slate-800
+ACCENT = (217, 119, 6)                              # amber-600, bronze
+ACCENT_SOFT = (251, 191, 36)                        # amber-400
 WHITE = (255, 255, 255)
-MUTED = (176, 189, 214)
+MUTED = (148, 163, 184)                             # slate-400
 
 ROOT = Path(__file__).resolve().parent.parent
 PHOTO = ROOT / "assets" / "profile.jpg"
@@ -128,8 +128,8 @@ def main() -> None:
         if px + w > text_right:
             break
         d.rounded_rectangle((px, 412, px + w, 462), radius=25,
-                            outline=(88, 108, 168), width=2)
-        d.text((px + 17, 425), m, font=f_metric, fill=(214, 224, 244))
+                            outline=(71, 85, 105), width=2)
+        d.text((px + 17, 425), m, font=f_metric, fill=(226, 232, 240))
         px += w + 12
 
     tracked(d, (x, 536), FOOTER, font("regular", 21), MUTED, tracking=0.6)
