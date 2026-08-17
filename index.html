@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  ============================================================================
+  Live at: https://mdxdxbhub2026.github.io/Portffolio/
+
+  Still optional (search for "REPLACE"):
+  1. GitHub social link in the sidebar is commented out — uncomment to show it
+  2. "Download CV" button expects assets/Manoj-Rajan-CV.pdf — drop the file in
+  3. Headshot loads from assets/profile.jpg — until then, "MR" initials show
+  ============================================================================
+-->
+
+<title>Manoj Rajan — Digital Transformation Manager | Enterprise Solutions Lead</title>
+<meta name="description" content="Digital transformation leader with 20+ years in enterprise business systems, fleet-management platforms and business process transformation. PMP® and CBAP® certified. Dubai, UAE.">
+<meta name="author" content="Manoj Rajan">
+<meta name="theme-color" content="#0b1020">
+
+<!-- Live GitHub Pages address. Absolute URLs are required for LinkedIn previews. -->
+<link rel="canonical" href="https://mdxdxbhub2026.github.io/Portffolio/">
+<meta property="og:url" content="https://mdxdxbhub2026.github.io/Portffolio/">
+<meta property="og:image" content="https://mdxdxbhub2026.github.io/Portffolio/assets/og-image.png">
+<meta name="twitter:image" content="https://mdxdxbhub2026.github.io/Portffolio/assets/og-image.png">
+
+<!-- Open Graph — controls the LinkedIn / WhatsApp / Slack preview card -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Manoj Rajan">
+<meta property="og:title" content="Manoj Rajan — Digital Transformation Manager | Enterprise Solutions Lead">
+<meta property="og:description" content="20+ years leading enterprise systems and fleet-wide transformation. USD 2.5M+ in savings, 90% platform adoption, 448+ users migrated across 70+ vessels. PMP® · CBAP®">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Manoj Rajan — Digital Transformation Manager and Enterprise Solutions Lead, Dubai UAE">
+<meta property="og:locale" content="en_US">
+<meta property="profile:first_name" content="Manoj">
+<meta property="profile:last_name" content="Rajan">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manoj Rajan — Digital Transformation Manager | Enterprise Solutions Lead">
+<meta name="twitter:description" content="20+ years leading enterprise systems and fleet-wide transformation. USD 2.5M+ in savings across 70+ vessels. PMP® · CBAP®">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231f45ec'/><text x='50' y='68' font-family='Segoe UI,Arial' font-size='48' font-weight='700' fill='white' text-anchor='middle'>MR</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+  // Apply saved theme before paint to avoid a flash of the wrong colours
+  (function () {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Arial', 'sans-serif'] },
+        colors: {
+          brand: {
+            50:'#eef4ff',100:'#d9e6ff',200:'#bcd3ff',300:'#8eb5ff',400:'#598cff',
+            500:'#3465f7',600:'#1f45ec',700:'#1a35d8',800:'#1c2fae',900:'#1c2d89',950:'#151d54'
+          }
+        }
+      }
+    }
+  };
+</script>
+
+<style>
+  :root { --nav-h: 4rem; }
+  body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+  /* Reveal-on-scroll (disabled for reduced-motion users, see JS) */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  /* Visible, consistent keyboard focus */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #1f45ec; outline-offset: 3px; border-radius: 6px;
+  }
+  .dark a:focus-visible, .dark button:focus-visible { outline-color: #8eb5ff; }
+
+  /* Active nav link */
+  .nav-link { position: relative; }
+  .nav-link .nav-dash {
+    display:inline-block; height:1px; width:1.25rem; margin-right:.75rem;
+    background: currentColor; opacity:.35; transition: width .25s ease, opacity .25s ease;
+  }
+  .nav-link[aria-current="true"] .nav-dash { width:2.5rem; opacity:1; }
+
+  ::selection { background: #1f45ec; color: #fff; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Clean "Save as PDF" output */
+  @media print {
+    #sidebar, #mobile-bar, #progress, .no-print { display: none !important; }
+    #main { margin: 0 !important; padding: 0 !important; }
+    section { break-inside: avoid; page-break-inside: avoid; }
+    body { background: #fff !important; color: #000 !important; }
+  }
+</style>
+</head>
+
+<body class="bg-slate-50 dark:bg-[#080c18] text-slate-700 dark:text-slate-300 font-sans antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:top-3 focus:left-3 focus:rounded-lg focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white focus:font-semibold">Skip to main content</a>
+
+<!-- Scroll progress -->
+<div id="progress" class="fixed top-0 left-0 z-[55] h-[3px] w-0 bg-gradient-to-r from-brand-500 to-brand-700 lg:hidden" role="presentation"></div>
+
+<!-- ══════════════════════ MOBILE BAR ══════════════════════ -->
+<div id="mobile-bar" class="lg:hidden fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 bg-white/90 dark:bg-[#0b1020]/90 backdrop-blur border-b border-slate-200 dark:border-white/10">
+  <a href="#about" class="flex items-center gap-3 min-w-0">
+    <img id="avatar-sm" src="assets/profile.jpg" alt="" width="36" height="36" aria-hidden="true"
+         class="h-9 w-9 shrink-0 rounded-xl object-cover object-top">
+    <span id="avatar-sm-fallback" hidden class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-800 text-white text-xs font-bold tracking-wide">MR</span>
+    <span class="min-w-0">
+      <span class="block text-sm font-bold text-slate-900 dark:text-white leading-tight truncate">Manoj Rajan</span>
+      <span class="block text-[11px] text-slate-500 dark:text-slate-400 leading-tight truncate">Digital Transformation Manager</span>
+    </span>
+  </a>
+  <button id="menu-btn" type="button" class="grid h-10 w-10 place-items-center rounded-lg border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-200"
+          aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation menu">
+    <i class="fa-solid fa-bars text-base" aria-hidden="true"></i>
+  </button>
+</div>
+
+<!-- ══════════════════════ SIDEBAR ══════════════════════ -->
+<aside id="sidebar"
+       class="hidden lg:flex fixed z-40 top-16 lg:top-0 inset-x-0 lg:inset-x-auto lg:left-0 lg:h-screen lg:w-[19.5rem]
+              max-h-[calc(100vh-4rem)] lg:max-h-none overflow-y-auto
+              flex-col bg-white dark:bg-[#0b1020] border-b lg:border-b-0 lg:border-r border-slate-200 dark:border-white/10"
+       aria-label="Profile and site navigation">
+
+  <div class="flex flex-col gap-7 px-7 py-8 lg:py-10">
+
+    <!-- Avatar -->
+    <div class="flex flex-col items-center text-center">
+      <div class="relative">
+        <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-brand-500 via-brand-400 to-brand-800 opacity-70 blur-[6px]" aria-hidden="true"></div>
+        <!--
+          Headshot lives at assets/profile.jpg (square crop works best).
+          If the file is missing, the initials placeholder below is shown automatically.
+        -->
+        <img id="avatar" src="assets/profile.jpg" alt="Portrait of Manoj Rajan"
+             width="112" height="112" decoding="async"
+             class="relative h-28 w-28 rounded-full object-cover object-top ring-4 ring-white dark:ring-[#0b1020]">
+        <div id="avatar-fallback" hidden
+             class="relative grid h-28 w-28 place-items-center rounded-full bg-gradient-to-br from-brand-600 to-brand-900 text-white ring-4 ring-white dark:ring-[#0b1020]"
+             role="img" aria-label="Profile photo placeholder showing the initials M R">
+          <span class="text-3xl font-bold tracking-wider">MR</span>
+        </div>
+      </div>
+
+      <h1 class="mt-5 text-xl font-bold tracking-tight text-slate-900 dark:text-white">Manoj Rajan</h1>
+      <p class="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-600 dark:text-brand-300">PMP<sup>®</sup> &nbsp;·&nbsp; CBAP<sup>®</sup> &nbsp;·&nbsp; ITIL<sup>®</sup></p>
+      <p class="mt-3 text-sm font-medium leading-snug text-slate-600 dark:text-slate-400">
+        Digital Transformation Manager<br>Enterprise Solutions Lead
+      </p>
+      <p class="mt-3 inline-flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-500">
+        <i class="fa-solid fa-location-dot text-brand-500" aria-hidden="true"></i> Dubai, United Arab Emirates
+      </p>
+    </div>
+
+    <hr class="border-slate-200 dark:border-white/10">
+
+    <!-- Navigation -->
+    <nav id="nav" aria-label="Section navigation">
+      <ul class="flex flex-col gap-1">
+        <li><a class="nav-link group flex items-center rounded-lg px-2 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors" href="#about"><span class="nav-dash" aria-hidden="true"></span>About</a></li>
+        <li><a class="nav-link group flex items-center rounded-lg px-2 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors" href="#experience"><span class="nav-dash" aria-hidden="true"></span>Experience</a></li>
+        <li><a class="nav-link group flex items-center rounded-lg px-2 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors" href="#skills"><span class="nav-dash" aria-hidden="true"></span>Skills</a></li>
+        <li><a class="nav-link group flex items-center rounded-lg px-2 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors" href="#education"><span class="nav-dash" aria-hidden="true"></span>Education</a></li>
+        <li><a class="nav-link group flex items-center rounded-lg px-2 py-2 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors" href="#certifications"><span class="nav-dash" aria-hidden="true"></span>Certifications</a></li>
+      </ul>
+    </nav>
+
+    <hr class="border-slate-200 dark:border-white/10">
+
+    <!-- Social -->
+    <div>
+      <p class="mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Connect</p>
+      <div class="flex items-center gap-2.5">
+        <a href="https://www.linkedin.com/in/manojrajanuae/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)"
+           class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-colors">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+
+        <!-- REPLACE "YOUR-GITHUB-USERNAME" and remove these comment markers to show GitHub
+        <a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"
+           class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-colors">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        -->
+
+        <a href="mailto:echoflare06@gmail.com" aria-label="Send an email to Manoj Rajan"
+           class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-colors">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="tel:+971562855932" aria-label="Call Manoj Rajan"
+           class="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-brand-600 hover:text-white hover:border-brand-600 transition-colors">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Add your PDF at assets/Manoj-Rajan-CV.pdf, or delete this block -->
+    <a href="assets/Manoj-Rajan-CV.pdf" target="_blank" rel="noopener"
+       class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-600/25 hover:bg-brand-700 transition-colors">
+      <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+    </a>
+
+    <button id="theme-btn" type="button" class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-white/10 px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-300 transition-colors">
+      <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> <span id="theme-label">Dark mode</span>
+    </button>
+  </div>
+</aside>
+
+<!-- ══════════════════════ MAIN ══════════════════════ -->
+<main id="main" class="lg:ml-[19.5rem] pt-16 lg:pt-0">
+  <div class="mx-auto w-full max-w-3xl px-6 sm:px-10 lg:px-14 py-14 lg:py-20">
+
+    <!-- ─────────── ABOUT ─────────── -->
+    <section id="about" class="scroll-mt-24 lg:scroll-mt-10" aria-labelledby="about-h">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600 dark:text-brand-400">About</p>
+      <h2 id="about-h" class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        Enterprise systems leadership, measured in outcomes.
+      </h2>
+      <div class="mt-3 h-1 w-14 rounded-full bg-brand-600"></div>
+
+      <div class="reveal mt-7 space-y-5 text-[15px] leading-relaxed">
+        <p>
+          Digital transformation leader with <strong class="font-semibold text-slate-900 dark:text-white">20+ years</strong>
+          progressing from business analysis to specialist-level ownership of enterprise systems and fleet-wide
+          transformation — including being retained through a company acquisition to lead the critical systems
+          transition, then continuing to scale platform adoption and reporting automation across
+          <strong class="font-semibold text-slate-900 dark:text-white">70+ vessels</strong>.
+        </p>
+        <p>
+          Delivered <strong class="font-semibold text-slate-900 dark:text-white">USD 2.5M+</strong> in cumulative savings and
+          cost avoidance by driving system adoption to 90%, digitising procurement from manual quotations to 500+ daily
+          transactions, and building an in-house BI capability that replaced vendor-dependent reporting. Led
+          cross-functional teams and up to 448 users through platform migrations and change management programmes, with
+          direct leadership of a team of 10 Business Analysts.
+        </p>
+      </div>
+
+      <!-- Metrics -->
+      <dl class="reveal mt-9 grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+          <dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Experience</dt>
+          <dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">20<span class="text-brand-600">+</span> yrs</dd>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+          <dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Savings delivered</dt>
+          <dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">$2.5M<span class="text-brand-600">+</span></dd>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+          <dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Platform adoption</dt>
+          <dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">90<span class="text-brand-600">%</span></dd>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+          <dt class="text-[11px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Users migrated</dt>
+          <dd class="mt-1 text-2xl font-extrabold text-slate-900 dark:text-white">448<span class="text-brand-600">+</span></dd>
+        </div>
+      </dl>
+
+      <!-- Focus areas -->
+      <h3 class="reveal mt-12 text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Primary focus areas</h3>
+      <div class="reveal mt-4 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-5">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+          <h4 class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Enterprise platform ownership</h4>
+          <p class="mt-1.5 text-[13px] leading-relaxed text-slate-600 dark:text-slate-400">End-to-end accountability for AMOS and SERTICA — roadmap, vendor negotiation, requirements, UAT and release governance.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-5">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-arrows-spin" aria-hidden="true"></i></span>
+          <h4 class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Transformation &amp; change</h4>
+          <p class="mt-1.5 text-[13px] leading-relaxed text-slate-600 dark:text-slate-400">Capability assessment, process redesign and structured change management that moves adoption, not just go-live dates.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-5">
+          <span class="grid h-9 w-9 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+          <h4 class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Data, reporting &amp; AI</h4>
+          <p class="mt-1.5 text-[13px] leading-relaxed text-slate-600 dark:text-slate-400">In-house SQL reporting and KPI dashboards that removed vendor dependency, now extending into AI-assisted workflows.</p>
+        </div>
+      </div>
+
+      <!-- Value proposition -->
+      <blockquote class="reveal mt-10 rounded-2xl border-l-4 border-brand-600 bg-brand-50/70 dark:bg-brand-500/10 p-6">
+        <p class="text-[15px] font-medium leading-relaxed text-slate-800 dark:text-slate-200">
+          “I take enterprise platforms that are underused, under-governed or mid-migration and turn them into systems
+          people actually run the business on — measured in adoption, avoided spend and hours returned to operations.”
+        </p>
+      </blockquote>
+
+      <!-- Contact -->
+      <h3 class="reveal mt-12 text-xs font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Contact</h3>
+      <ul class="reveal mt-4 grid gap-3 sm:grid-cols-2">
+        <li>
+          <a href="mailto:echoflare06@gmail.com" class="flex items-center gap-3 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4 hover:border-brand-500 dark:hover:border-brand-500 transition-colors">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+            <span class="min-w-0">
+              <span class="block text-[11px] uppercase tracking-wider text-slate-400">Email</span>
+              <span class="block truncate text-sm font-semibold text-slate-900 dark:text-white">echoflare06@gmail.com</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="tel:+971562855932" class="flex items-center gap-3 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4 hover:border-brand-500 dark:hover:border-brand-500 transition-colors">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+            <span class="min-w-0">
+              <span class="block text-[11px] uppercase tracking-wider text-slate-400">Phone</span>
+              <span class="block truncate text-sm font-semibold text-slate-900 dark:text-white">+971 56 285 5932</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/manojrajanuae/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4 hover:border-brand-500 dark:hover:border-brand-500 transition-colors">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></span>
+            <span class="min-w-0">
+              <span class="block text-[11px] uppercase tracking-wider text-slate-400">LinkedIn</span>
+              <span class="block truncate text-sm font-semibold text-slate-900 dark:text-white">/in/manojrajanuae</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <div class="flex items-center gap-3 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+            <span class="min-w-0">
+              <span class="block text-[11px] uppercase tracking-wider text-slate-400">Based in</span>
+              <span class="block truncate text-sm font-semibold text-slate-900 dark:text-white">Dubai, UAE</span>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="my-16 border-slate-200 dark:border-white/10">
+
+    <!-- ─────────── EXPERIENCE ─────────── -->
+    <section id="experience" class="scroll-mt-24 lg:scroll-mt-10" aria-labelledby="experience-h">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600 dark:text-brand-400">Experience</p>
+      <h2 id="experience-h" class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Career history</h2>
+      <div class="mt-3 h-1 w-14 rounded-full bg-brand-600"></div>
+      <p class="mt-5 text-[15px] leading-relaxed">
+        Two decades with one global container shipping group — United Arab Shipping Company, acquired by Hapag-Lloyd AG
+        in 2017 — with scope expanding from business analysis to fleet-wide platform ownership.
+      </p>
+
+      <ol class="mt-10 space-y-10 border-l border-slate-200 dark:border-white/10 pl-7">
+
+        <!-- Role 1 -->
+        <li class="reveal relative">
+          <span class="absolute -left-[2.19rem] top-1.5 grid h-4 w-4 place-items-center rounded-full bg-brand-600 ring-4 ring-slate-50 dark:ring-[#080c18]" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Specialist — Fleet Management Software / Central Operations</h3>
+            <span class="rounded-full bg-brand-600/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">Apr 2023 – Jul 2026</span>
+          </div>
+          <p class="mt-1.5 text-sm font-semibold text-slate-600 dark:text-slate-400">Hapag-Lloyd AG · Dubai, UAE</p>
+          <p class="mt-1 text-[13px] italic text-slate-500 dark:text-slate-500">Scope: Enterprise business systems &amp; digital transformation leadership</p>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed">
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Led safety digitalisation across <strong class="font-semibold text-slate-900 dark:text-white">73 vessels</strong> and mobile maintenance workflows across 40 vessels by standardising SERTICA processes, lifting adoption to 80–90% and cutting manual reporting effort by up to 90%.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Transitioned <strong class="font-semibold text-slate-900 dark:text-white">448+ vessel and shore users</strong> onto standardised digital workflows through structured training and a SharePoint knowledge hub, embedding consistent practice fleet-wide.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Delivered <strong class="font-semibold text-slate-900 dark:text-white">50+ KPI dashboards</strong> and automated reports via SQL Server and SERTICA's native reporting tool, replacing manual Excel processes and increasing platform utilisation by 80%.</span></li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">SERTICA</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">SQL Server</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">Change management</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">SharePoint</span>
+          </div>
+        </li>
+
+        <!-- Role 2 -->
+        <li class="reveal relative">
+          <span class="absolute -left-[2.19rem] top-1.5 grid h-4 w-4 place-items-center rounded-full bg-brand-600 ring-4 ring-slate-50 dark:ring-[#080c18]" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Maritime IT Analyst — Fleet Management</h3>
+            <span class="rounded-full bg-brand-600/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">Jun 2017 – Mar 2023</span>
+          </div>
+          <p class="mt-1.5 text-sm font-semibold text-slate-600 dark:text-slate-400">Hapag-Lloyd AG · Dubai, UAE</p>
+          <p class="mt-1 text-[13px] italic text-slate-500 dark:text-slate-500">Retained through the UASC – Hapag-Lloyd acquisition to lead enterprise systems continuity and integration</p>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed">
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Safeguarded AMOS operations across <strong class="font-semibold text-slate-900 dark:text-white">32 vessels</strong> through the merger by coordinating enterprise systems integration and cross-functional migration of critical fleet applications — with zero disruption to operations.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Modernised infrastructure across 32 vessels — migrating legacy servers to VMware and standing up AMOS, Active Directory and file/email services — resolving 70–80% of critical production incidents and cutting post-migration downtime by ~90%.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Established Jira-based incident management and a Confluence knowledge base, supporting SLA-based resolution of 30–40 monthly incidents while reducing reliance on subject-matter experts.</span></li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">AMOS</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">M&amp;A systems integration</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">VMware</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">Jira / Confluence</span>
+          </div>
+        </li>
+
+        <!-- Role 3 -->
+        <li class="reveal relative">
+          <span class="absolute -left-[2.19rem] top-1.5 grid h-4 w-4 place-items-center rounded-full bg-brand-600 ring-4 ring-slate-50 dark:ring-[#080c18]" aria-hidden="true"></span>
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Senior Business Analyst — Fleet Management</h3>
+            <span class="rounded-full bg-brand-600/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">Feb 2006 – Jun 2017</span>
+          </div>
+          <p class="mt-1.5 text-sm font-semibold text-slate-600 dark:text-slate-400">United Arab Shipping Company (UASC) · Dubai, UAE</p>
+          <p class="mt-1 text-[13px] italic text-slate-500 dark:text-slate-500">Promoted from Business Application Analyst · Scope: Enterprise business systems leadership</p>
+          <ul class="mt-4 space-y-2.5 text-[15px] leading-relaxed">
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Revitalised the under-adopted AMOS ERP platform through enterprise-wide capability assessment, process redesign and change management — increasing adoption by 90% and avoiding <strong class="font-semibold text-slate-900 dark:text-white">~USD 1M</strong> in system replacement costs.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Digitised procurement via the AMOS–ShipServ integration, scaling daily quotation capacity from 5–6 manual requests to <strong class="font-semibold text-slate-900 dark:text-white">500+ digital transactions</strong> and delivering USD 1M+ in cumulative savings.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Built <strong class="font-semibold text-slate-900 dark:text-white">150+ SQL-based reports</strong> and dashboards using AMOS's native reporting tool, reducing development costs by 75% and avoiding USD 500K+ in vendor expenditure.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Re-engineered workflows across three operational departments, digitising manual activities and cutting administrative paperwork by 75%.</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-chevron-right mt-1.5 text-[10px] text-brand-600" aria-hidden="true"></i><span>Directed end-to-end AMOS enhancement delivery — product roadmap, vendor negotiation, requirements, UAT and release governance — while providing functional leadership to a team of <strong class="font-semibold text-slate-900 dark:text-white">10 Business Analysts</strong>.</span></li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">AMOS ERP</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">ShipServ</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">Vendor negotiation</span>
+            <span class="rounded-md bg-slate-100 dark:bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-600 dark:text-slate-400">Team leadership</span>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Independent work -->
+      <div class="reveal mt-12 rounded-2xl border border-dashed border-slate-300 dark:border-white/15 p-6">
+        <h3 class="flex items-center gap-2.5 text-sm font-bold text-slate-900 dark:text-white">
+          <i class="fa-solid fa-microchip text-brand-600" aria-hidden="true"></i> AI development &amp; independent prototypes
+        </h3>
+        <p class="mt-2.5 text-[15px] leading-relaxed">
+          Completing a three-month programme in AI development and agentic AI (CAIDP and CAAIP, LISRC), supported by
+          independent, non-production prototypes for maritime workflows, personal finance tracking, and CV and
+          networking support — built using AI-assisted development, prompt engineering and functional testing.
+        </p>
+      </div>
+    </section>
+
+    <hr class="my-16 border-slate-200 dark:border-white/10">
+
+    <!-- ─────────── SKILLS ─────────── -->
+    <section id="skills" class="scroll-mt-24 lg:scroll-mt-10" aria-labelledby="skills-h">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600 dark:text-brand-400">Skills</p>
+      <h2 id="skills-h" class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Core expertise</h2>
+      <div class="mt-3 h-1 w-14 rounded-full bg-brand-600"></div>
+
+      <div class="mt-9 grid gap-4 sm:grid-cols-2">
+
+        <div class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <h3 class="flex items-center gap-2.5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-ship" aria-hidden="true"></i></span>
+            Enterprise platforms
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">SERTICA</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">AMOS ERP</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">ShipServ</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Microsoft 365</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">SharePoint</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Fleet management systems</li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <h3 class="flex items-center gap-2.5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+            Project management &amp; governance
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Programme delivery</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Business analysis</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Stakeholder management</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Vendor management</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Requirements &amp; UAT</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Release governance</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Change management</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Product roadmaps</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Jira</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Confluence</li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <h3 class="flex items-center gap-2.5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-brain" aria-hidden="true"></i></span>
+            AI &amp; data analytics
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">SQL &amp; SQL Server</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">KPI dashboards</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Operational reporting</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Reporting automation</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Agentic AI</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Prompt engineering</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">AI-assisted development</li>
+          </ul>
+        </div>
+
+        <div class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <h3 class="flex items-center gap-2.5 text-sm font-bold uppercase tracking-wider text-slate-900 dark:text-white">
+            <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+            Infrastructure &amp; tools
+          </h3>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">VMware</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Active Directory</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Server migration</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">File &amp; email services</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">Incident management</li>
+            <li class="rounded-lg border border-slate-200 dark:border-white/10 px-2.5 py-1.5 text-[13px] font-medium text-slate-700 dark:text-slate-300">ITIL service delivery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-16 border-slate-200 dark:border-white/10">
+
+    <!-- ─────────── EDUCATION ─────────── -->
+    <section id="education" class="scroll-mt-24 lg:scroll-mt-10" aria-labelledby="education-h">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600 dark:text-brand-400">Education</p>
+      <h2 id="education-h" class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Academic background</h2>
+      <div class="mt-3 h-1 w-14 rounded-full bg-brand-600"></div>
+
+      <div class="mt-9 grid gap-4">
+        <article class="reveal flex gap-5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-graduation-cap text-lg" aria-hidden="true"></i></span>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Master of Computer Applications (MCA)</h3>
+              <span class="rounded-full bg-brand-600/10 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">2002</span>
+            </div>
+            <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">Utkal University</p>
+            <p class="mt-2 text-[14px] leading-relaxed">Postgraduate degree in computer applications — the foundation for two decades of enterprise systems and business analysis work.</p>
+          </div>
+        </article>
+
+        <article class="reveal flex gap-5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-atom text-lg" aria-hidden="true"></i></span>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <h3 class="text-base font-bold text-slate-900 dark:text-white">Bachelor of Science (BSc), Physics</h3>
+              <span class="rounded-full bg-brand-600/10 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-brand-700 dark:text-brand-300">1998</span>
+            </div>
+            <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">Sambalpur University</p>
+            <p class="mt-2 text-[14px] leading-relaxed">Undergraduate degree in physics, with an emphasis on analytical and quantitative problem solving.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <hr class="my-16 border-slate-200 dark:border-white/10">
+
+    <!-- ─────────── CERTIFICATIONS ─────────── -->
+    <section id="certifications" class="scroll-mt-24 lg:scroll-mt-10" aria-labelledby="certifications-h">
+      <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-brand-600 dark:text-brand-400">Certifications</p>
+      <h2 id="certifications-h" class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">Professional credentials</h2>
+      <div class="mt-3 h-1 w-14 rounded-full bg-brand-600"></div>
+
+      <!-- Add the year you earned each credential where marked -->
+      <div class="mt-9 grid gap-4 sm:grid-cols-2">
+
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <div class="flex items-start justify-between gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-certificate text-lg" aria-hidden="true"></i></span>
+            <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Certified</span>
+          </div>
+          <h3 class="mt-4 text-base font-bold text-slate-900 dark:text-white">Project Management Professional (PMP<sup>®</sup>)</h3>
+          <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">Project Management Institute (PMI)</p>
+          <p class="mt-2 text-[13px] text-slate-500 dark:text-slate-500">Programme and project delivery, scope, risk and stakeholder governance.</p>
+        </article>
+
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <div class="flex items-start justify-between gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-clipboard-check text-lg" aria-hidden="true"></i></span>
+            <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Certified</span>
+          </div>
+          <h3 class="mt-4 text-base font-bold text-slate-900 dark:text-white">Certified Business Analysis Professional (CBAP<sup>®</sup>)</h3>
+          <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">International Institute of Business Analysis (IIBA)</p>
+          <p class="mt-2 text-[13px] text-slate-500 dark:text-slate-500">Requirements engineering, process analysis and solution evaluation at enterprise scale.</p>
+        </article>
+
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <div class="flex items-start justify-between gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-gears text-lg" aria-hidden="true"></i></span>
+            <span class="rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Certified</span>
+          </div>
+          <h3 class="mt-4 text-base font-bold text-slate-900 dark:text-white">ITIL<sup>®</sup> Foundation</h3>
+          <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">EXIN</p>
+          <p class="mt-2 text-[13px] text-slate-500 dark:text-slate-500">IT service management, incident and change practices across the service lifecycle.</p>
+        </article>
+
+        <article class="reveal rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] p-6">
+          <div class="flex items-start justify-between gap-3">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-300"><i class="fa-solid fa-robot text-lg" aria-hidden="true"></i></span>
+            <span class="rounded-full bg-amber-500/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">In progress</span>
+          </div>
+          <h3 class="mt-4 text-base font-bold text-slate-900 dark:text-white">AI Development &amp; Agentic AI (CAIDP · CAAIP)</h3>
+          <p class="mt-1 text-sm font-semibold text-slate-600 dark:text-slate-400">LISRC</p>
+          <p class="mt-2 text-[13px] text-slate-500 dark:text-slate-500">Three-month programme in AI development and agentic AI, with hands-on prototype work.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-slate-200 dark:border-white/10 pt-8 pb-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-[13px] text-slate-500 dark:text-slate-500">
+          © <span id="year">2026</span> Manoj Rajan · Dubai, UAE
+        </p>
+        <div class="flex items-center gap-4 no-print">
+          <a href="https://www.linkedin.com/in/manojrajanuae/" target="_blank" rel="noopener noreferrer" class="text-[13px] font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors">LinkedIn</a>
+          <a href="mailto:echoflare06@gmail.com" class="text-[13px] font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors">Email</a>
+          <a href="#about" class="text-[13px] font-medium text-slate-500 hover:text-brand-600 dark:text-slate-400 dark:hover:text-brand-300 transition-colors">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</main>
+
+<!-- Structured data — helps search engines and some link unfurlers -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manoj Rajan",
+  "jobTitle": "Digital Transformation Manager | Enterprise Solutions Lead",
+  "email": "mailto:echoflare06@gmail.com",
+  "telephone": "+971562855932",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+  "sameAs": ["https://www.linkedin.com/in/manojrajanuae/"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Utkal University" },
+    { "@type": "CollegeOrUniversity", "name": "Sambalpur University" }
+  ],
+  "knowsAbout": ["Digital Transformation","Enterprise Business Systems","Business Analysis","Fleet Management Systems","AMOS ERP","SERTICA","Change Management","SQL Reporting"],
+  "hasCredential": ["PMP","CBAP","ITIL Foundation"]
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sidebar   = document.getElementById('sidebar');
+  var menuBtn   = document.getElementById('menu-btn');
+  var navLinks  = Array.prototype.slice.call(document.querySelectorAll('#nav a[href^="#"]'));
+  var sections  = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+
+  /* ---------- Avatar fallback (shows initials if the photo is missing) ---------- */
+  [['avatar', 'avatar-fallback'], ['avatar-sm', 'avatar-sm-fallback']].forEach(function (pair) {
+    var img = document.getElementById(pair[0]);
+    var fb  = document.getElementById(pair[1]);
+    if (!img || !fb) return;
+    function swap() { img.hidden = true; img.style.display = 'none'; fb.hidden = false; }
+    img.addEventListener('error', swap);
+    if (img.complete && img.naturalWidth === 0) swap();
+  });
+
+  /* ---------- Mobile menu ---------- */
+  function isMobile() { return window.innerWidth < 1024; }
+
+  function setMenu(open) {
+    sidebar.classList.toggle('hidden', !open);
+    sidebar.classList.toggle('flex', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    menuBtn.innerHTML = '<i class="fa-solid ' + (open ? 'fa-xmark' : 'fa-bars') + ' text-base" aria-hidden="true"></i>';
+  }
+
+  menuBtn.addEventListener('click', function () {
+    setMenu(sidebar.classList.contains('hidden'));
+  });
+
+  // Keep desktop/mobile states from fighting each other on resize
+  window.addEventListener('resize', function () {
+    if (!isMobile()) {
+      sidebar.classList.remove('hidden', 'flex');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    } else if (menuBtn.getAttribute('aria-expanded') !== 'true') {
+      sidebar.classList.add('hidden');
+      sidebar.classList.remove('flex');
+    }
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isMobile() && menuBtn.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menuBtn.focus();
+    }
+  });
+
+  /* ---------- Smooth scrolling ---------- */
+  navLinks.concat(Array.prototype.slice.call(document.querySelectorAll('a[href="#about"], a[href="#main"]')))
+    .forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        if (isMobile() && menuBtn.getAttribute('aria-expanded') === 'true') setMenu(false);
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        history.replaceState(null, '', link.getAttribute('href'));
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+      });
+    });
+
+  /* ---------- Active link highlighting + progress ---------- */
+  var progress = document.getElementById('progress');
+  var ticking = false;
+
+  function update() {
+    ticking = false;
+    var offset = isMobile() ? 96 : 120;
+    var y = window.scrollY + offset;
+    var current = sections[0];
+
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= y) current = sections[i];
+    }
+    // At the very bottom, always light up the last section
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      current = sections[sections.length - 1];
+    }
+
+    navLinks.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + current.id;
+      a.setAttribute('aria-current', on ? 'true' : 'false');
+      a.classList.toggle('text-brand-600', on);
+      a.classList.toggle('dark:text-brand-300', on);
+      a.classList.toggle('text-slate-500', !on);
+      a.classList.toggle('dark:text-slate-400', !on);
+    });
+
+    if (progress) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealables = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealables.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    revealables.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Theme toggle ---------- */
+  var themeBtn = document.getElementById('theme-btn');
+  var themeLabel = document.getElementById('theme-label');
+
+  function syncThemeLabel() {
+    themeLabel.textContent = document.documentElement.classList.contains('dark') ? 'Light mode' : 'Dark mode';
+  }
+  syncThemeLabel();
+
+  themeBtn.addEventListener('click', function () {
+    var dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+    syncThemeLabel();
+  });
+
+  /* ---------- Footer year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
