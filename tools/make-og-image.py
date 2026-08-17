@@ -64,11 +64,16 @@ def tracked(draw, xy, text, fnt, fill, tracking=0):
 
 
 def circular(img: Image.Image, size: int) -> Image.Image:
-    """Centre-crop to a square, resize, and mask to a circle."""
+    """Crop to a square, resize, and mask to a circle.
+
+    Horizontally centred, but biased towards the top on portrait sources so a
+    head-and-shoulders shot keeps the head instead of being cut at the brow.
+    """
     w, h = img.size
     side = min(w, h)
-    img = img.crop(((w - side) // 2, (h - side) // 2,
-                    (w - side) // 2 + side, (h - side) // 2 + side))
+    left = (w - side) // 2
+    top = int((h - side) * 0.12) if h > w else (h - side) // 2
+    img = img.crop((left, top, left + side, top + side))
     img = img.resize((size, size), Image.LANCZOS).convert("RGB")
 
     mask = Image.new("L", (size * 4, size * 4), 0)

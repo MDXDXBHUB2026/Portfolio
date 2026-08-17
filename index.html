@@ -90,6 +90,11 @@
 <style>
   body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 
+  /* Tailwind's display utilities (grid, flex …) out-specify the UA rule behind
+     the `hidden` attribute, so the image fallbacks would render on top of a
+     photo that loaded fine. Keep `hidden` authoritative. */
+  [hidden] { display: none !important; }
+
   /* Reveal-on-scroll (disabled for reduced-motion users, see JS) */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.is-visible { opacity: 1; transform: none; }
