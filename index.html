@@ -680,6 +680,9 @@
               <span class="rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-700 dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-400">Data validation</span>
               <span class="rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-700 dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-400">Maritime logistics</span>
             </div>
+            <a href="#projects" class="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-amber-700 dark:text-amber-400 hover:gap-3 transition-all duration-200">
+              <i class="fa-solid fa-rotate-right text-[10px]" aria-hidden="true"></i> Rebuilt in 2026 as a live application
+            </a>
           </div>
         </article>
 
@@ -768,10 +771,66 @@
         Independent, <strong class="font-semibold text-slate-900 dark:text-slate-100">non-production</strong> concepts built
         alongside a three-month programme in AI development and agentic AI (CAIDP and CAAIP, LISRC). Each starts from a
         business or user problem and is taken to a working proof-of-concept to explore workflow, usability and potential
-        value — using AI-assisted development, prompt engineering and functional testing.
+        value — using AI-assisted development, prompt engineering and functional testing. The first of them now runs
+        as a live application.
       </p>
 
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
+      <!-- ── Featured: the one prototype running as a live application ── -->
+      <article class="reveal mt-10 overflow-hidden rounded-xl border border-slate-800 bg-slate-900 shadow-lift">
+        <div class="grid gap-0 lg:grid-cols-[1.25fr_1fr]">
+
+          <div class="p-7 sm:p-8">
+            <div class="flex flex-wrap items-center gap-2.5">
+              <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-500 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-slate-900">
+                <i class="fa-solid fa-circle-play text-[9px]" aria-hidden="true"></i> Live application
+              </span>
+              <span class="rounded-full border border-slate-700 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.1em] text-slate-400">Aug 2026 – present</span>
+            </div>
+
+            <h3 class="mt-4 text-xl font-bold tracking-tight text-white">Maritime Haulage Intelligence <span class="text-amber-400">(TRUST 2.0)</span></h3>
+            <p class="mt-3 text-[15px] leading-relaxed text-slate-300">
+              A reconstruction of the haulage contract capability I built at UASC in 2015 — then a web of Excel
+              workbooks, VLOOKUP tables and VBA macros — rebuilt as a full-stack web application. Import and export
+              workbenches turn commercial haulage agreements into validated, upload-ready operational records, with
+              analytics over rate distribution, slab coverage and data quality.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-2.5">
+              <a href="https://mdxdxbhub2026.github.io/Maritime-Haulage-Intelligence/" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2.5 rounded-full bg-amber-500 px-5 py-2.5 text-[13px] font-semibold text-slate-900 hover:bg-amber-400 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-200">
+                Open the application <i class="fa-solid fa-arrow-up-right-from-square text-[10px]" aria-hidden="true"></i>
+              </a>
+              <a href="https://github.com/MDXDXBHUB2026/Maritime-Haulage-Intelligence" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2.5 rounded-full border border-slate-700 px-5 py-2.5 text-[13px] font-semibold text-slate-200 hover:border-amber-400 hover:text-amber-400 transition-colors duration-200">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Source
+              </a>
+            </div>
+
+            <p class="mt-5 text-[12px] leading-relaxed text-slate-500">
+              Built on a clean-room synthetic dataset with fictional European carriers — no commercial data.
+            </p>
+          </div>
+
+          <div class="border-t border-slate-800 bg-slate-950/40 p-7 sm:p-8 lg:border-l lg:border-t-0">
+            <p class="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">What it does</p>
+            <ul class="mt-4 space-y-3 text-[13.5px] leading-relaxed text-slate-300">
+              <li class="flex gap-2.5"><i class="fa-solid fa-gears mt-1 text-[10px] text-amber-500" aria-hidden="true"></i><span><strong class="font-semibold text-white">Deterministic rule engine</strong> — multi-terminal expansion across 20 ft and 40 ft equipment tiers</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-layer-group mt-1 text-[10px] text-amber-500" aria-hidden="true"></i><span><strong class="font-semibold text-white">Five-band weight slab generator</strong> — canonical child records with zero-rate suppression</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-file-export mt-1 text-[10px] text-amber-500" aria-hidden="true"></i><span><strong class="font-semibold text-white">Legacy serialisation</strong> — XLSX and CSV export with direction-specific column ordering</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-wand-magic-sparkles mt-1 text-[10px] text-amber-500" aria-hidden="true"></i><span><strong class="font-semibold text-white">AI layer</strong> — rate schedule extraction, plain-language validation diagnostics and anomaly detection, kept clear of the calculation path</span></li>
+              <li class="flex gap-2.5"><i class="fa-solid fa-vial-circle-check mt-1 text-[10px] text-amber-500" aria-hidden="true"></i><span><strong class="font-semibold text-white">Regression suite</strong> — deterministic business-rule assertions running in under 5 ms</span></li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-1.5">
+              <span class="rounded-full border border-slate-700 px-2.5 py-1 text-[11px] font-medium text-slate-400">React 19</span>
+              <span class="rounded-full border border-slate-700 px-2.5 py-1 text-[11px] font-medium text-slate-400">TypeScript</span>
+              <span class="rounded-full border border-slate-700 px-2.5 py-1 text-[11px] font-medium text-slate-400">Node.js</span>
+              <span class="rounded-full border border-slate-700 px-2.5 py-1 text-[11px] font-medium text-slate-400">Gemini AI</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="mt-4 grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
 
         <!-- 01 -->
         <article class="reveal group flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-white/[0.07] bg-white dark:bg-night-surface shadow-card hover:shadow-lift transition-shadow duration-200">
