@@ -176,7 +176,7 @@ Certification years are not in the CV yet; add them there and in `#certification
 
 ## Updating the project snapshots
 
-The six cards in `#projects` use SVGs copied into `assets/projects/` from the standalone
+The prototype cards in `#prototypes` use SVGs copied into `assets/projects/` from the standalone
 AI portfolio, so this site stays self-contained and does not hotlink another page. If you
 change a prototype's screenshots over there, refresh the copy here:
 
@@ -191,8 +191,8 @@ update them if a prototype gains screens.
 ## Editing the content later
 
 Everything lives in `index.html`, in plain readable sections marked with comment banners
-(`INTRO HERO`, `ABOUT`, `EXPERIENCE`, `PROJECTS`, `SKILLS`, `EDUCATION`, `CERTIFICATIONS`,
-`CONTACT`). To add a skill badge,
+(`INTRO HERO`, `ABOUT`, `EXPERIENCE`, `PROJECTS`, `AI PROTOTYPES`, `SKILLS`, `EDUCATION`,
+`CERTIFICATIONS`, `CONTACT`). To add a skill badge,
 copy an existing `<li>` in that category and change the text. To add a role, copy a whole
 `<li class="reveal relative">` block in the experience timeline.
 
@@ -220,8 +220,9 @@ opening via `file://` breaks the relative image paths.
 
 - Full-bleed intro hero with a large portrait, desaturated and masked so it dissolves
   into the charcoal band (treatment modelled on goranradmanovic.github.io)
-- Projects section carrying six AI prototype cards with snapshots, each linking through
-  to the full write-up at mdxdxbhub2026.github.io/digital-ai-portfolio
+- Projects section for delivered enterprise work, with a written case study attached to the
+  two projects that have one
+- AI prototypes section, led by the one running as a live application
 - Sticky full-height sidebar on desktop, collapsing to a hamburger bar under 1024px
 - Smooth scrolling with active-link highlighting driven by scroll position
 - Dark/light toggle, remembered in `localStorage`, defaulting to your system setting
