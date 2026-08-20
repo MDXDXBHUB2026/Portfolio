@@ -65,7 +65,7 @@ HIGHLIGHTS = [
 EXPERIENCE = [
     {
         "role": "Specialist — Fleet Management Software / Central Operations",
-        "dates": "Apr 2023 – Jul 2026",
+        "dates": "Apr 2023 – Oct 2026",
         "org": "Hapag-Lloyd AG  ·  Dubai, UAE",
         "note": "Scope: Enterprise business systems &amp; digital transformation leadership",
         "bullets": [
