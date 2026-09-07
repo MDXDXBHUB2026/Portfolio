@@ -101,7 +101,9 @@ EXPERIENCE = [
         "role": "Senior Business Analyst — Fleet Management",
         "dates": "Feb 2006 – Jun 2017",
         "org": "United Arab Shipping Company (UASC)  ·  Dubai, UAE",
-        "note": "Promoted from Business Application Analyst  ·  Scope: Enterprise business systems leadership",
+        "note": "Progressed through application support and business analysis responsibilities into a "
+                "senior business analysis role within Fleet Management  ·  Scope: Enterprise business "
+                "systems leadership",
         "bullets": [
             "Revitalised the under-adopted AMOS ERP platform through enterprise-wide capability assessment, "
             "process redesign and change management, increasing adoption by 90% and avoiding <b>~USD 1M</b> "
@@ -121,9 +123,10 @@ EXPERIENCE = [
     },
 ]
 
-EXPERIENCE_INTRO = ("Two decades with one global container shipping group — United Arab Shipping "
-                    "Company, acquired by Hapag-Lloyd AG in 2017 — with scope expanding from "
-                    "business analysis to fleet-wide platform ownership.")
+EXPERIENCE_INTRO = ("Two decades in global container shipping — with United Arab Shipping Company "
+                    "(UASC) from 2006 to 2017, followed by Hapag-Lloyd AG after the 2017 acquisition — "
+                    "with scope expanding from application support and business analysis to fleet-wide "
+                    "enterprise platform ownership.")
 
 EXPERTISE = [
     ("Digital Transformation", "Capability assessment · Business process redesign · Change "
