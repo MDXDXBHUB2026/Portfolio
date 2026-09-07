@@ -24,8 +24,8 @@ OUT = Path(__file__).resolve().parent.parent / "assets" / "Manoj-Rajan-CV.pdf"
 # ── Identity ──────────────────────────────────────────────────────────────
 NAME = "Manoj Rajan"
 CREDENTIALS = "PMP<super rise=3 size=6>&#174;</super>  ·  CBAP<super rise=3 size=6>&#174;</super>  ·  ITIL<super rise=3 size=6>&#174;</super>"
-TITLE = "Digital Transformation Manager  |  Enterprise Solutions Lead"
-TAGLINE = "Enterprise Applications  ·  Business Systems  ·  Business Process Transformation"
+TITLE = "Digital Transformation &amp; Enterprise Business Systems Lead"
+TAGLINE = "Senior Business Analysis  ·  ERP &amp; Fleet Systems  ·  Transformation Delivery"
 CONTACT = ("Dubai, UAE  ·  +971 56 285 5932  ·  "
            '<a href="mailto:echoflare06@gmail.com" color="#B45309">echoflare06@gmail.com</a>')
 LINKS = ('<a href="https://www.linkedin.com/in/manojrajanuae/" color="#B45309">linkedin.com/in/manojrajanuae</a>'
@@ -40,15 +40,16 @@ RULE = colors.HexColor("#D8DEE7")
 
 # ── Content ───────────────────────────────────────────────────────────────
 SUMMARY = (
-    "Digital transformation leader with 20+ years progressing from business analysis to "
-    "specialist-level ownership of enterprise systems and fleet-wide transformation — including "
-    "being retained through a company acquisition to lead the critical systems transition, then "
-    "continuing to scale platform adoption and reporting automation across 70+ vessels. Delivered "
+    "Digital Transformation and Enterprise Business Systems professional with 20+ years progressing "
+    "from business analysis to specialist-level ownership of enterprise systems and fleet-wide "
+    "transformation — including being retained through a company acquisition to lead the critical systems "
+    "transition, then continuing to scale platform adoption and reporting automation across 70+ vessels. Delivered "
     "<b>USD 2.5M+</b> in cumulative savings and cost avoidance by driving system adoption to 90%, "
     "digitising procurement from manual quotations to 500+ daily transactions and building an "
     "in-house BI capability that replaced vendor-dependent reporting. Led cross-functional teams and "
-    "up to 448 users through platform migrations and change management programmes; provided direct "
-    "leadership to a team of 10 Business Analysts."
+    "up to 448 users through platform migrations and change management programmes, and provided functional "
+    "leadership to a team of 10 Business Analysts while coordinating cross-functional delivery involving "
+    "business users, technical teams, vendors, vessels and management."
 )
 
 HIGHLIGHTS = [
@@ -58,8 +59,8 @@ HIGHLIGHTS = [
     "platform adoption to <b>90%</b>, avoiding a USD 1M system replacement.",
     "Designed <b>150+ SQL-based reports</b> and 50+ KPI dashboards within AMOS's native reporting "
     "tool, cutting vendor reporting costs by USD 500K+ and reducing administrative effort by 75%.",
-    "Provided direct leadership to a team of <b>10 Business Analysts</b> and cross-functional "
-    "stakeholders across procurement, operations and IT.",
+    "Provided functional leadership to a team of <b>10 Business Analysts</b> while coordinating cross-functional "
+    "delivery involving business users, technical teams, vendors, vessels and management.",
 ]
 
 EXPERIENCE = [
@@ -67,7 +68,8 @@ EXPERIENCE = [
         "role": "Specialist — Fleet Management Software / Central Operations",
         "dates": "Apr 2023 – Oct 2026",
         "org": "Hapag-Lloyd AG  ·  Dubai, UAE",
-        "note": "Scope: Enterprise business systems &amp; digital transformation leadership",
+        "note": "Scope: Fleet-wide enterprise systems ownership, digital transformation delivery, "
+                "business process improvement and cross-functional stakeholder coordination",
         "bullets": [
             "Led safety digitalisation across <b>73 vessels</b> and mobile maintenance workflows across "
             "40 vessels by standardising SERTICA processes, lifting adoption to 80–90% and cutting "
@@ -236,7 +238,7 @@ def build() -> None:
                           leftMargin=margin, rightMargin=margin,
                           topMargin=14 * mm, bottomMargin=16 * mm,
                           title=f"{NAME} — Curriculum Vitae", author=NAME,
-                          subject="Digital Transformation Manager | Enterprise Solutions Lead")
+                          subject="Digital Transformation & Enterprise Business Systems Lead")
     frame = Frame(margin, 16 * mm, width, A4[1] - 30 * mm, id="body",
                   leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     doc.addPageTemplates([PageTemplate(id="cv", frames=[frame], onPage=decorate)])

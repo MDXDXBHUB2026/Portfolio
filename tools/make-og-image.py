@@ -17,8 +17,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 # ── Content ──────────────────────────────────────────────────────────────
 EYEBROW = "DIGITAL TRANSFORMATION  ·  ENTERPRISE SYSTEMS"
 NAME = "Manoj Rajan"
-TITLE_1 = "Digital Transformation Manager"
-TITLE_2 = "Enterprise Solutions Lead"
+TITLE_1 = "Digital Transformation &"
+TITLE_2 = "Enterprise Business Systems Lead"
 METRICS = ["20+ YEARS", "USD 2.5M+ DELIVERED", "70+ VESSELS"]
 FOOTER = "PMP®  ·  CBAP®  ·  ITIL®        Dubai, United Arab Emirates"
 
@@ -121,8 +121,14 @@ def main() -> None:
         f_name = font("bold", size)
     d.text((x, 138), NAME, font=f_name, fill=WHITE)
 
-    d.text((x, 248), TITLE_1, font=font("semibold", 37), fill=(226, 232, 240))
-    d.text((x, 296), TITLE_2, font=font("semibold", 37), fill=(226, 232, 240))
+    # Title lines - shrink together to fit if the longer positioning line runs wide
+    size_t = 37
+    f_title = font("semibold", size_t)
+    while max(d.textlength(TITLE_1, font=f_title), d.textlength(TITLE_2, font=f_title)) > (text_right - x) and size_t > 24:
+        size_t -= 1
+        f_title = font("semibold", size_t)
+    d.text((x, 248), TITLE_1, font=f_title, fill=(226, 232, 240))
+    d.text((x, 296), TITLE_2, font=f_title, fill=(226, 232, 240))
 
     d.rectangle((x, 372, x + 78, 376), fill=ACCENT)
 
