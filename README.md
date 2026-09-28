@@ -12,6 +12,7 @@ assets/
   og-image.png             ← LinkedIn preview card (generated)
   Manoj-Rajan-CV.pdf       ← generated CV, powers the "Download CV" button
   projects/*.svg           ← prototype snapshots, copied from the AI portfolio
+  projects/maritime-dashboard.jpg ← screenshot of the live Maritime AI Control Tower
 tools/
   make-og-image.py         ← regenerates og-image.png
   make-cv-pdf.py           ← regenerates the downloadable CV
@@ -178,8 +179,12 @@ AI portfolio, so this site stays self-contained and does not hotlink another pag
 change a prototype's screenshots over there, refresh the copy here:
 
 ```bash
-curl -sL -o assets/projects/maritime.svg https://mdxdxbhub2026.github.io/digital-ai-portfolio/images/maritime.svg
+curl -sL -o assets/projects/greenroute-plan.svg https://mdxdxbhub2026.github.io/digital-ai-portfolio/images/greenroute-plan.svg
 ```
+
+The Maritime AI Control Tower card uses a real 1600×900 screenshot of the live app's
+Executive Dashboard (`assets/projects/maritime-dashboard.jpg`). Retake it when the app's
+dashboard changes.
 
 Cards sit in a 16:9 frame with `object-contain`, so a tall mobile mockup (GreenRoute) is
 letterboxed rather than cropped. Snapshot counts in the card links are written by hand —
