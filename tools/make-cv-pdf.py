@@ -174,8 +174,8 @@ PROTOTYPES = (
 PROTOTYPE_ITEMS = [
     ('<a href="https://mdxdxbhub2026.github.io/maritime-operations-ai/#/dashboard" color="#B45309">'
      "Maritime Operations AI Control Tower</a>",
-     "Live web app (React, TypeScript) — fleet overview, anomaly detection, predictive maintenance, "
-     "voyage and fuel optimisation, safety monitoring and human-in-the-loop automation with approval gates."),
+     "Live web app (React, TypeScript) — simulated live telemetry, anomaly detection, predictive "
+     "maintenance, voyage optimisation, safety monitoring and an AI Decision Centre with human approval gates."),
     ('<a href="https://mdxdxbhub2026.github.io/Maritime-Haulage-Intelligence/" color="#B45309">'
      "Maritime Haulage Intelligence</a>",
      "Live web app — the 2015 UASC haulage contract capability rebuilt with a deterministic rule engine, "
