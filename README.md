@@ -58,8 +58,6 @@ If you ever rename the repo, update all four.
 - **Download CV** — the button serves `assets/Manoj-Rajan-CV.pdf`, generated from
   `tools/make-cv-pdf.py`. Edit the CONTENT block in that script and re-run to update it,
   or just drop your own PDF in at the same path.
-- **Certification years** — the credential cards show the issuing body but no dates.
-  Add the year you earned each one in the `#certifications` section.
 
 ---
 
@@ -169,10 +167,9 @@ python tools/make-cv-pdf.py
 ```
 
 Requires reportlab (`pip install reportlab`). All wording lives in the constants at the top
-of the script — summary, highlights, roles, education, certifications, expertise. Layout,
-spacing and page breaks are handled for you. Two pages, A4.
-
-Certification years are not in the CV yet; add them there and in `#certifications` together.
+of the script — summary, highlights, competencies, roles, selected projects, education,
+certifications and prototypes. Layout, spacing and page breaks are handled for you. Two pages,
+A4 — check the page count after any addition, and keep every figure identical to the site.
 
 ## Updating the project snapshots
 

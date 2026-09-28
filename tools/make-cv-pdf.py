@@ -53,15 +53,22 @@ SUMMARY = (
 )
 
 HIGHLIGHTS = [
-    "Led enterprise systems and <b>448+ users</b> through a company acquisition and full platform "
-    "migration (UASC → Hapag-Lloyd), maintaining zero disruption to fleet operations across 70+ vessels.",
-    "Directed capability assessment, process redesign and change management that lifted enterprise "
-    "platform adoption to <b>90%</b>, avoiding a USD 1M system replacement.",
-    "Designed <b>150+ SQL-based reports</b> and 50+ KPI dashboards within AMOS's native reporting "
-    "tool, cutting vendor reporting costs by USD 500K+ and reducing administrative effort by 75%.",
-    "Provided functional leadership to a team of <b>10 Business Analysts</b> while coordinating cross-functional "
-    "delivery involving business users, technical teams, vendors, vessels and management.",
+    "Retained through the UASC – Hapag-Lloyd acquisition to safeguard AMOS operations across "
+    "<b>32 vessels</b> with zero operational disruption; later scaled SERTICA digital workflows to "
+    "<b>448+ vessel and shore users</b> across 73 vessels.",
+    "Revitalised the under-adopted AMOS ERP platform through capability assessment, process redesign "
+    "and change management, raising adoption to <b>~90%</b> and avoiding ~USD 1M in replacement costs.",
+    "Digitised procurement through the AMOS–ShipServ integration, from 5–6 manual quotations to "
+    "<b>500+ daily digital transactions</b> and USD 1M+ in cumulative savings.",
+    "Built an in-house reporting capability: <b>150+ SQL-based AMOS reports</b> (USD 500K+ vendor spend "
+    "avoided) and 50+ SERTICA KPI dashboards replacing manual Excel reporting.",
 ]
+
+COMPETENCIES = ("Digital transformation  ·  Enterprise business systems  ·  Business analysis (CBAP)  ·  "
+                "Programme &amp; project delivery (PMP)  ·  ERP &amp; fleet management systems  ·  "
+                "Systems integration  ·  Requirements &amp; UAT  ·  Release governance  ·  Change management  ·  "
+                "Vendor &amp; stakeholder management  ·  SQL reporting &amp; KPI dashboards  ·  "
+                "Process automation  ·  AI-assisted workflows")
 
 EXPERIENCE = [
     {
@@ -73,11 +80,11 @@ EXPERIENCE = [
         "bullets": [
             "Led safety digitalisation across <b>73 vessels</b> and mobile maintenance workflows across "
             "40 vessels by standardising SERTICA processes, lifting adoption to 80–90% and cutting "
-            "manual reporting and paperwork effort by up to 90%.",
+            "manual reporting effort by up to 90%.",
             "Transitioned <b>448+ vessel and shore users</b> onto standardised digital workflows through "
             "structured training and a SharePoint knowledge hub, embedding consistent practice fleet-wide.",
             "Delivered <b>50+ KPI dashboards</b> and automated reports via SQL Server and SERTICA's native "
-            "reporting tool, replacing manual Excel processes and increasing platform utilisation by 80%.",
+            "reporting tool, replacing manual Excel processes and raising platform adoption to 80–90%.",
         ],
     },
     {
@@ -106,7 +113,7 @@ EXPERIENCE = [
                 "systems leadership",
         "bullets": [
             "Revitalised the under-adopted AMOS ERP platform through enterprise-wide capability assessment, "
-            "process redesign and change management, increasing adoption by 90% and avoiding <b>~USD 1M</b> "
+            "process redesign and change management, raising adoption to approximately 90% and avoiding <b>~USD 1M</b> "
             "in system replacement costs.",
             "Digitised procurement via the AMOS–ShipServ integration, scaling daily quotation capacity "
             "from 5–6 manual requests to <b>500+ digital transactions</b> and delivering USD 1M+ in "
@@ -123,19 +130,22 @@ EXPERIENCE = [
     },
 ]
 
-EXPERIENCE_INTRO = ("Two decades in global container shipping — with United Arab Shipping Company "
-                    "(UASC) from 2006 to 2017, followed by Hapag-Lloyd AG after the 2017 acquisition — "
-                    "with scope expanding from application support and business analysis to fleet-wide "
-                    "enterprise platform ownership.")
+PROJECTS = [
+    ("Enterprise Fleet Safety Digitalisation", "Hapag-Lloyd  ·  Jun 2022 – Jul 2026",
+     "Digitised safety jobs, drills and event reporting across the fleet — requirements, process "
+     "redesign, UAT, phased rollout and training with Fleet Management, HSEQ, IT, vessels and vendors."),
+    ("AMOS–ShipServ TradeNet Integration", "UASC  ·  Dec 2014 – Dec 2015",
+     "Led functional and integration delivery of the RFQ-to-order-confirmation cycle: interface and "
+     "field mapping, validation rules, exception handling, integration testing and UAT across AMOS, "
+     "ShipServ and Spectec."),
+    ("Haulage Contract Data Automation", "UASC  ·  Dec 2015 – Feb 2016",
+     "Converted haulage business rules into a macro-enabled Excel solution generating validated, "
+     "upload-ready contract records."),
+]
 
 EXPERTISE = [
-    ("Digital Transformation", "Capability assessment · Business process redesign · Change "
-                               "management · Product roadmaps"),
-    ("Enterprise Platforms", "SERTICA · AMOS ERP · ShipServ · Microsoft 365 · SharePoint"),
-    ("Delivery &amp; Governance", "Stakeholder management · Vendor management · UAT · Release "
-                                  "governance · Jira · Confluence"),
-    ("Data &amp; Infrastructure", "SQL Server · SQL reporting · KPI dashboards · VMware · "
-                                  "Active Directory"),
+    ("Platforms &amp; tools", "SERTICA · AMOS ERP · ShipServ TradeNet · SQL Server · Microsoft 365 · "
+                              "SharePoint · Jira · Confluence · VMware · Active Directory"),
 ]
 
 EDUCATION = [
@@ -157,14 +167,24 @@ CERTIFICATIONS = [
 
 PROTOTYPES = (
     "Completing a three-month programme in AI development and agentic AI (CAIDP and CAAIP, LISRC), "
-    "supported by independent, non-production prototypes built with AI-assisted development, prompt "
-    "engineering and functional testing: a Maritime AI Control Tower (anomaly detection, predictive "
-    "maintenance and voyage optimisation), GreenRoute AI (sustainable mobility decision support), "
-    "CareerConnectAI (CV analysis and opportunity matching), Ledger 24K (personal finance and wealth "
-    "analytics), and two digital experience concepts. "
-    '<a href="https://mdxdxbhub2026.github.io/digital-ai-portfolio/" color="#B45309">'
-    "mdxdxbhub2026.github.io/digital-ai-portfolio</a>"
+    "applied through independent, non-production prototypes built on synthetic data with AI-assisted "
+    "development, prompt engineering and functional testing."
 )
+
+PROTOTYPE_ITEMS = [
+    ('<a href="https://mdxdxbhub2026.github.io/maritime-operations-ai/#/dashboard" color="#B45309">'
+     "Maritime Operations AI Control Tower</a>",
+     "Live web app (React, TypeScript) — fleet overview, anomaly detection, predictive maintenance, "
+     "voyage and fuel optimisation, safety monitoring and human-in-the-loop automation with approval gates."),
+    ('<a href="https://mdxdxbhub2026.github.io/Maritime-Haulage-Intelligence/" color="#B45309">'
+     "Maritime Haulage Intelligence</a>",
+     "Live web app — the 2015 UASC haulage contract capability rebuilt with a deterministic rule engine, "
+     "weight-slab generator and an AI layer kept clear of the calculation path."),
+    ("More concepts",
+     'GreenRoute AI, CareerConnectAI, Ledger 24K — '
+     '<a href="https://mdxdxbhub2026.github.io/digital-ai-portfolio/" color="#B45309">'
+     "mdxdxbhub2026.github.io/digital-ai-portfolio</a>"),
+]
 
 # ── Styles ────────────────────────────────────────────────────────────────
 S = {
@@ -241,7 +261,9 @@ def build() -> None:
                           leftMargin=margin, rightMargin=margin,
                           topMargin=14 * mm, bottomMargin=16 * mm,
                           title=f"{NAME} — Curriculum Vitae", author=NAME,
-                          subject="Digital Transformation & Enterprise Business Systems Lead")
+                          subject="Digital Transformation & Enterprise Business Systems Lead",
+                          keywords="Digital Transformation, Enterprise Business Systems, Business Analysis, "
+                                   "PMP, CBAP, ERP, AMOS, SERTICA, Fleet Management Systems, Dubai")
     frame = Frame(margin, 16 * mm, width, A4[1] - 30 * mm, id="body",
                   leftPadding=0, rightPadding=0, topPadding=0, bottomPadding=0)
     doc.addPageTemplates([PageTemplate(id="cv", frames=[frame], onPage=decorate)])
@@ -263,8 +285,12 @@ def build() -> None:
     st += heading("Career highlights", width)
     st += [Paragraph(h, S["bullet"], bulletText="•") for h in HIGHLIGHTS]
 
+    st += heading("Core competencies", width)
+    st += [Paragraph(COMPETENCIES, S["body"]), Spacer(1, 3)]
+    for label, items in EXPERTISE:
+        st += [Paragraph(f"<b>{label}:</b> {items}", S["kv"], bulletText="•")]
+
     st += heading("Work experience", width)
-    st += [Paragraph(EXPERIENCE_INTRO, S["body"]), Spacer(1, 2)]
     for job in EXPERIENCE:
         block = [Paragraph(job["role"], S["role"]),
                  Paragraph(f'{job["dates"]}', S["dates"]),
@@ -273,6 +299,11 @@ def build() -> None:
         block += [Paragraph(b, S["bullet"], bulletText="•") for b in job["bullets"][:2]]
         st += [KeepTogether(block)]
         st += [Paragraph(b, S["bullet"], bulletText="•") for b in job["bullets"][2:]]
+
+    st += heading("Selected projects", width)
+    for name, meta, desc in PROJECTS:
+        st += [Paragraph(f"<b>{name}</b>  <font color='#B45309' size=7.6>{meta}</font><br/>{desc}",
+                         S["kv"], bulletText="•")]
 
     st += heading("Education", width)
     for degree, school, year in EDUCATION:
@@ -285,12 +316,10 @@ def build() -> None:
                          f"<font color='#5B6675' size=7.6>&nbsp; {detail}</font>",
                          S["kv"], bulletText="•")]
 
-    st += heading("Core expertise", width)
-    for label, items in EXPERTISE:
-        st += [Paragraph(f"<b>{label}:</b> {items}", S["kv"], bulletText="•")]
-
     st += heading("AI development &amp; independent prototypes", width)
-    st += [Paragraph(PROTOTYPES, S["body"])]
+    st += [Paragraph(PROTOTYPES, S["body"]), Spacer(1, 3)]
+    for name, desc in PROTOTYPE_ITEMS:
+        st += [Paragraph(f"<b>{name}</b> — {desc}", S["kv"], bulletText="•")]
 
     doc.build(st)
     print(f"Wrote {OUT}  ({OUT.stat().st_size / 1024:.0f} KB)")
